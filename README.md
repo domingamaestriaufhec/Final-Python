@@ -2,10 +2,22 @@
 
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![Flask 3.0](https://img.shields.io/badge/Framework-Flask_3.0-000000.svg?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
+[![Render Live](https://img.shields.io/badge/Render-Live_Deployment-46E3B7.svg?logo=render&logoColor=white)](https://investigalab-python.onrender.com)
 [![Archify Pipeline](https://img.shields.io/badge/Architecture-Archify_Pipeline-6366f1.svg)](https://github.com/tt-a1i/archify.git)
-[![Status](https://img.shields.io/badge/Status-Production_Ready-success.svg)](#)
+[![IDE](https://img.shields.io/badge/Environment-Google_Antigravity-orange.svg)](#)
 
 > Una aplicación web completa, interactiva y pedagógica desarrollada en **Python con Flask**, diseñada para guiar a estudiantes e investigadores desde sus primeros pasos hasta la publicación científica indexada en **5 niveles progresivos**.
+
+---
+
+## 🌐 Enlaces Oficiales de Entrega
+
+* 🚀 **Despliegue Funcional en Vivo (Render):** [https://investigalab-python.onrender.com](https://investigalab-python.onrender.com)
+* 🐙 **Repositorio Oficial en GitHub:** [https://github.com/domingamaestriaufhec/Final-Python](https://github.com/domingamaestriaufhec/Final-Python)
+* 📓 **Cuaderno Jupyter con Modelos Matemáticos:** [`InvestigaLab_Metodologia_Cientifica.ipynb`](InvestigaLab_Metodologia_Cientifica.ipynb)
+* 🎬 **Guión para el Video de Sustentación:** [`docs/presentacion_sustentacion.md`](docs/presentacion_sustentacion.md)
+* 🛠️ **Entorno Agéntico de Desarrollo:** Google Antigravity IDE
+
 
 ---
 
