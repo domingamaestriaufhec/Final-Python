@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{% block title %}InvestigaLab | Escuela de Metodología de la Investigación Científica{% endblock %}</title>
+    <meta name="description" content="Plataforma interactiva para aprender Metodología de la Investigación Científica paso a paso: Principiante, Básico, Intermedio, Avanzado y Experto.">
+    
+    <!-- Fuentes Google: Outfit & Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- Iconos Font Awesome 6 CDN -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <!-- Estilos de la Aplicación -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <!-- Barra de Navegación Principal -->
+    <header class="navbar">
+        <div class="container nav-container">
+            <a href="{{ url_for('main.index') }}" class="brand-logo">
+                <div class="brand-icon">
+                    <i class="fa-solid fa-microscope"></i>
+                </div>
+                <span>Investiga<span style="color: #6366f1;">Lab</span></span>
+                <span class="brand-badge">Python / Flask</span>
+            </a>
+
+            <nav>
+                <ul class="nav-links">
+                    <li><a href="{{ url_for('main.index') }}" class="nav-link"><i class="fa-solid fa-house"></i> Inicio</a></li>
+                    <li><a href="{{ url_for('main.levels') }}" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> 5 Niveles</a></li>
+                    <li><a href="{{ url_for('main.biblioteca_view') }}" class="nav-link"><i class="fa-solid fa-book-bookmark"></i> Libros & Autores</a></li>
+                    <li><a href="{{ url_for('main.matriz_view') }}" class="nav-link"><i class="fa-solid fa-table-cells"></i> Matriz Científica</a></li>
+                    <li>
+                        <a href="{{ url_for('main.pipeline_view') }}" class="nav-link pipeline-tab">
+                            <i class="fa-solid fa-diagram-project"></i> Pipeline Archify
+                        </a>
+                    </li>
+                </ul>
+
+            </nav>
+        </div>
+    </header>
+
+    <!-- Contenido Principal Dinámico -->
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+
+    <!-- Pie de Página -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <div class="brand-logo" style="margin-bottom: 12px;">
+                        <div class="brand-icon" style="width: 32px; height: 32px; font-size: 1rem;">
+                            <i class="fa-solid fa-atom"></i>
+                        </div>
+                        <span>InvestigaLab</span>
+                    </div>
+                    <p style="color: var(--text-muted); font-size: 0.88rem; max-width: 360px;">
+                        Plataforma pedagógica desarrollada en Python y Flask para democratizar la formación en Metodología de la Investigación Científica rigurosa.
+                    </p>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Navegación</h4>
+                    <ul>
+                        <li><a href="{{ url_for('main.index') }}">Inicio / Landing Page</a></li>
+                        <li><a href="{{ url_for('main.levels') }}">Currículo de los 5 Niveles</a></li>
+                        <li><a href="{{ url_for('main.matriz_view') }}">Simulador de Matriz</a></li>
+                        <li><a href="{{ url_for('main.pipeline_view') }}">Pipeline & Arquitectura</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-links">
+                    <h4>Arquitectura & Tech</h4>
+                    <ul>
+                        <li><span style="color: #a5b4fc;"><i class="fa-brands fa-python"></i> Python 3.10+</span></li>
+                        <li><span style="color: #38bdf8;"><i class="fa-solid fa-flask"></i> Flask 3.0</span></li>
+                        <li><a href="https://github.com/tt-a1i/archify.git" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Archify Engine</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>© 2026 InvestigaLab — Proyecto Educativo en Python & Metodología de la Investigación.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+    {% block scripts %}{% endblock %}
+</body>
+</html>

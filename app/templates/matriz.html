@@ -1,0 +1,148 @@
+{% extends "base.html" %}
+
+{% block title %}Matriz de Consistencia Metodológica | InvestigaLab{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top: 40px;">
+    <div class="container">
+        <!-- Cabecera de la Herramienta -->
+        <div class="section-header" style="margin-bottom: 24px;">
+            <span class="section-tag" style="color: var(--accent);">
+                <i class="fa-solid fa-table-cells"></i> Herramienta Práctica de Investigación
+            </span>
+            <h1 class="section-title">Generador de Matriz de Consistencia Científica</h1>
+            <p class="section-desc">
+                Construye y valida en tiempo real la coherencia lógica entre tu problema de investigación, objetivos, hipótesis, variables y diseño metodológico.
+            </p>
+        </div>
+
+        <!-- Banner Vectorial de Matriz -->
+        <div class="vector-frame" style="margin-bottom: 30px; max-height: 320px;">
+            <img src="{{ url_for('static', filename='images/matrix_consistency_art.png') }}" 
+                 alt="Matriz de Consistencia Científica" 
+                 class="vector-img" style="max-height: 320px; object-position: center;">
+        </div>
+
+        <!-- Acciones Rápidas -->
+        <div style="display: flex; gap: 12px; justify-content: flex-end; margin-bottom: 24px; flex-wrap: wrap;">
+
+            <button id="btnCargarEjemplo" class="btn btn-secondary">
+                <i class="fa-solid fa-wand-magic-sparkles"></i> Cargar Ejemplo de Prueba
+            </button>
+            <button id="btnExportarMd" class="btn btn-accent">
+                <i class="fa-regular fa-copy"></i> Copiar en Formato Markdown
+            </button>
+        </div>
+
+        <div class="matrix-form-grid">
+            
+            <!-- Columna Izquierda: Formulario de Entrada -->
+            <div class="level-card" style="background: rgba(17, 24, 39, 0.85); --level-color: var(--accent);">
+                <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: #fff; margin-bottom: 20px;">
+                    <i class="fa-solid fa-pen-to-square" style="color: var(--accent);"></i> Formulación de Elementos
+                </h3>
+
+                <form id="matrixForm">
+                    <div class="form-group">
+                        <label class="form-label" for="temaInvestigacion">1. Tema / Título de la Investigación</label>
+                        <input type="text" id="temaInvestigacion" class="form-input" placeholder="Ej: Gamificación y Pensamiento Algorítmico en Estudiantes de Secundaria">
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="problemaGeneral">2. Problema General (Pregunta de Investigación)</label>
+                        <textarea id="problemaGeneral" rows="2" class="form-textarea" placeholder="Ej: ¿En qué medida la gamificación influye en el pensamiento algorítmico...?"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="objetivoGeneral">3. Objetivo General (Verbo en Infinitivo)</label>
+                        <textarea id="objetivoGeneral" rows="2" class="form-textarea" placeholder="Ej: Determinar la influencia de la gamificación en el pensamiento algorítmico..."></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label class="form-label" for="hipotesisGeneral">4. Hipótesis General (H1)</label>
+                        <textarea id="hipotesisGeneral" rows="2" class="form-textarea" placeholder="Ej: La gamificación mejora significativamente el pensamiento algorítmico..."></textarea>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="form-group">
+                            <label class="form-label" for="varIndependiente">5. Variable Independiente (VI / Causa)</label>
+                            <input type="text" id="varIndependiente" class="form-input" placeholder="Ej: Plataforma Gamificada">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="varDependiente">6. Variable Dependiente (VD / Efecto)</label>
+                            <input type="text" id="varDependiente" class="form-input" placeholder="Ej: Pensamiento Algorítmico">
+                        </div>
+                    </div>
+
+                    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 16px;">
+                        <div class="form-group">
+                            <label class="form-label" for="enfoqueMetodologico">7. Enfoque</label>
+                            <select id="enfoqueMetodologico" class="form-select">
+                                <option value="Cuantitativo">Cuantitativo (Deductivo / Estadístico)</option>
+                                <option value="Cualitativo">Cualitativo (Inductivo / Fenomenológico)</option>
+                                <option value="Mixto">Mixto (Integrado / Concurrente)</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="disenoEstudio">8. Diseño</label>
+                            <select id="disenoEstudio" class="form-select">
+                                <option value="Cuasi-experimental">Cuasi-experimental</option>
+                                <option value="Experimental Puro">Experimental Puro</option>
+                                <option value="No experimental Transeccional Correlacional">No experimental Transeccional</option>
+                                <option value="No experimental Longitudinal">No experimental Longitudinal</option>
+                                <option value="Estudio de Caso Cualitativo">Estudio de Caso Cualitativo</option>
+                            </select>
+                        </div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- Columna Derecha: Vista Previa de la Matriz en Tiempo Real -->
+            <div class="matrix-result-card">
+                <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+                    <h3 style="font-family: var(--font-heading); font-size: 1.3rem; color: #fff;">
+                        <i class="fa-solid fa-eye" style="color: #10b981;"></i> Matriz de Consistencia Viva
+                    </h3>
+                    <span class="badge" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7; padding: 4px 10px; border-radius: var(--radius-full); font-size: 0.78rem; font-weight: 700;">
+                        Auto-sincronizada
+                    </span>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 14px; font-size: 0.92rem;">
+                    <div style="background: rgba(255, 255, 255, 0.02); padding: 12px 16px; border-radius: var(--radius-sm); border-left: 3px solid var(--primary);">
+                        <strong style="color: #a5b4fc; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 2px;">Tema de Investigación:</strong>
+                        <span id="outTema" style="color: #fff; font-weight: 600;">Por definir...</span>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.02); padding: 12px 16px; border-radius: var(--radius-sm); border-left: 3px solid #38bdf8;">
+                        <strong style="color: #38bdf8; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 2px;">Problema General:</strong>
+                        <span id="outProblema" style="color: var(--text-main);">¿Cuál es la relación entre...</span>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.02); padding: 12px 16px; border-radius: var(--radius-sm); border-left: 3px solid #10b981;">
+                        <strong style="color: #6ee7b7; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 2px;">Objetivo General:</strong>
+                        <span id="outObjetivo" style="color: var(--text-main);">Determinar la relación entre...</span>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.02); padding: 12px 16px; border-radius: var(--radius-sm); border-left: 3px solid #f59e0b;">
+                        <strong style="color: #fbbf24; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 2px;">Hipótesis General:</strong>
+                        <span id="outHipotesis" style="color: var(--text-main);">Existe una relación significativa entre...</span>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.02); padding: 12px 16px; border-radius: var(--radius-sm); border-left: 3px solid #ec4899;">
+                        <strong style="color: #f472b6; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 2px;">Variables Operacionales:</strong>
+                        <span id="outVariables" style="color: var(--text-main);"><strong>VI:</strong> Variable 1 <br><strong>VD:</strong> Variable 2</span>
+                    </div>
+
+                    <div style="background: rgba(255, 255, 255, 0.02); padding: 12px 16px; border-radius: var(--radius-sm); border-left: 3px solid #8b5cf6;">
+                        <strong style="color: #c4b5fd; font-size: 0.8rem; text-transform: uppercase; display: block; margin-bottom: 2px;">Metodología:</strong>
+                        <span id="outMetodologia" style="color: var(--text-main);">Enfoque: Cuantitativo | Diseño: Cuasi-experimental</span>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+{% endblock %}

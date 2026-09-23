@@ -1,0 +1,246 @@
+{% extends "base.html" %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="hero">
+    <div class="container">
+        <div class="hero-grid">
+            <div>
+                <div class="hero-pill">
+                    <i class="fa-solid fa-graduation-cap"></i> Formación Científica Universitaria y Profesional
+                </div>
+                
+                <h1 class="hero-title">
+                    Domina la <span class="gradient-accent">Metodología Científica</span> Paso a Paso
+                </h1>
+                
+                <p class="hero-subtitle">
+                    Un curso interactivo estructurado en <strong>5 niveles progresivos</strong> (desde tu primera hipótesis hasta la publicación indexada en Scopus/WoS) con arquitectura modular en Python y Flask.
+                </p>
+
+                <div class="hero-actions">
+                    <a href="{{ url_for('main.levels') }}" class="btn btn-primary">
+                        <i class="fa-solid fa-compass"></i> Explorar los 5 Niveles
+                    </a>
+                    <a href="{{ url_for('main.matriz_view') }}" class="btn btn-accent">
+                        <i class="fa-solid fa-table-cells"></i> Matriz Metodológica
+                    </a>
+                    <a href="{{ url_for('main.pipeline_view') }}" class="btn btn-secondary">
+                        <i class="fa-solid fa-diagram-project"></i> Pipeline Archify
+                    </a>
+                </div>
+            </div>
+
+            <div class="vector-frame">
+                <img src="{{ url_for('static', filename='images/hero_scientific_vector.png') }}" 
+                     alt="Investigación Científica y Metodología" 
+                     class="vector-img">
+            </div>
+        </div>
+
+        <!-- Métricas Rápidas -->
+        <div class="hero-stats">
+            <div class="stat-card">
+                <div class="stat-number">5</div>
+                <div class="stat-label">Niveles de Especialización</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">15</div>
+                <div class="stat-label">Módulos & Talleres Prácticos</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">100%</div>
+                <div class="stat-label">Python & Arquitectura Limpia</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number">IMRyD</div>
+                <div class="stat-label">Publicación & Peer Review</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!-- Sección 1: ¿Qué es el proyecto y qué problema resuelve? -->
+<section class="section" style="background: rgba(17, 24, 39, 0.4); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Fundamento & Propósito</span>
+            <h2 class="section-title">¿Qué Problema Resuelve InvestigaLab?</h2>
+            <p class="section-desc">
+                Cerrando la brecha entre la teoría metodológica abstracta y la ejecución empírica rigurosa.
+            </p>
+        </div>
+
+        <div class="levels-grid">
+            <div class="level-card" style="--level-color: #ef4444;">
+                <div class="level-card-header">
+                    <span class="level-badge">El Problema</span>
+                    <div class="level-icon-wrap"><i class="fa-solid fa-triangle-exclamation"></i></div>
+                </div>
+                <h3 class="level-card-title">Metodología Intimidante y Desarticulada</h3>
+                <p class="level-card-subtitle">
+                    Tradicionalmente, la investigación se enseña como un manual rígido y denso. Los estudiantes quedan desorientados al pasar de una pregunta de investigación a la recolección de datos y al análisis estadístico.
+                </p>
+                <ul style="list-style: none; font-size: 0.88rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
+                    <li><i class="fa-solid fa-xmark" style="color: #ef4444;"></i> Objetivos e hipótesis sin alineación (incongruencia).</li>
+                    <li><i class="fa-solid fa-xmark" style="color: #ef4444;"></i> Desconocimiento de pruebas estadísticas adecuadas.</li>
+                    <li><i class="fa-solid fa-xmark" style="color: #ef4444;"></i> Bloqueo al redactar artículos y responder a revisores.</li>
+                </ul>
+            </div>
+
+            <div class="level-card" style="--level-color: #10b981;">
+                <div class="level-card-header">
+                    <span class="level-badge" style="color: #10b981;">Nuestra Solución</span>
+                    <div class="level-icon-wrap"><i class="fa-solid fa-lightbulb"></i></div>
+                </div>
+                <h3 class="level-card-title">Ruta Pedagógica Modular & Herramientas Vivas</h3>
+                <p class="level-card-subtitle">
+                    InvestigaLab proporciona una escalera de 5 niveles con ejemplos aplicados, matrices de congruencia en tiempo real y el desglose de cada fase investigativa.
+                </p>
+                <ul style="list-style: none; font-size: 0.88rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
+                    <li><i class="fa-solid fa-check" style="color: #10b981;"></i> 5 niveles claros: Principiante, Básico, Intermedio, Avanzado y Experto.</li>
+                    <li><i class="fa-solid fa-check" style="color: #10b981;"></i> Generador de Matriz de Consistencia Científica interactivo.</li>
+                    <li><i class="fa-solid fa-check" style="color: #10b981;"></i> Visualización del Pipeline de software con el estándar de Archify.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 2: Los 5 Niveles del Curso -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Ruta de Aprendizaje</span>
+            <h2 class="section-title">El Currículo Científico en 5 Fases</h2>
+            <p class="section-desc">
+                Una progresión estructurada que te lleva desde el planteamiento del problema hasta la publicación indexada.
+            </p>
+        </div>
+
+        <div class="levels-grid">
+            {% for lvl in levels %}
+            <div class="level-card" style="--level-color: {{ lvl.color }};">
+                <div class="level-card-header">
+                    <span class="level-badge">{{ lvl.badge }}</span>
+                    <div class="level-icon-wrap"><i class="fa-solid {{ lvl.icon }}"></i></div>
+                </div>
+                <h3 class="level-card-title">{{ lvl.title }}</h3>
+                <p class="level-card-subtitle">{{ lvl.subtitle }}</p>
+                
+                <div class="level-meta">
+                    <span><i class="fa-regular fa-clock"></i> {{ lvl.duration }}</span>
+                    <span><i class="fa-solid fa-layer-group"></i> {{ lvl.modules|length }} Módulos</span>
+                </div>
+
+                <a href="{{ url_for('main.levels', level_id=lvl.id) }}" class="btn btn-secondary" style="width: 100%; justify-content: center;">
+                    Ver Módulos & Casos <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Sección 3: Arquitectura & Pipeline (Archify) -->
+<section class="section" style="background: rgba(15, 23, 42, 0.6); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Ingeniería & Pipeline</span>
+            <h2 class="section-title">Arquitectura del Proyecto (Estilo Archify)</h2>
+            <p class="section-desc">
+                Documentación del flujo de procesamiento técnico y metodológico siguiendo los principios de <a href="https://github.com/tt-a1i/archify.git" target="_blank" style="color: var(--secondary); text-decoration: underline;">Archify</a>.
+            </p>
+        </div>
+
+        <div class="vector-frame" style="margin-bottom: 32px;">
+            <img src="{{ url_for('static', filename='images/pipeline_archify_art.png') }}" 
+                 alt="Diagrama Vectorial Pipeline Archify" 
+                 class="vector-img">
+        </div>
+
+        <div class="pipeline-container">
+            <div class="pipeline-header">
+                <div>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 4px;">Pipeline de Ejecución Flask + Capa Científica</h3>
+                    <p style="font-size: 0.88rem; color: var(--text-muted);">Desacoplamiento total entre la infraestructura de Python y el dominio científico.</p>
+                </div>
+                <span class="archify-badge"><i class="fa-solid fa-diagram-project"></i> Pipeline Activo</span>
+            </div>
+
+
+            <div class="pipeline-flow">
+                {% for stage in pipeline.app_pipeline_stages[:3] %}
+                <div class="stage-card">
+                    <div class="stage-number">{{ stage.number }}</div>
+                    <div class="stage-info">
+                        <h4>{{ stage.name }}</h4>
+                        <span class="stage-component">{{ stage.component }}</span>
+                    </div>
+                    <div class="stage-io">
+                        <p style="margin-bottom: 6px;">{{ stage.description }}</p>
+                        <div>
+                            <span class="io-tag">In: {{ stage.inputs[0] }}</span>
+                            <span class="io-tag" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">Out: {{ stage.outputs[0] }}</span>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div>
+
+            <div style="text-align: center; margin-top: 28px;">
+                <a href="{{ url_for('main.pipeline_view') }}" class="btn btn-primary">
+                    <i class="fa-solid fa-network-wired"></i> Abrir Vista Completa del Pipeline Archify
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Sección 4: Guía Rápida de Ejecución para Principiantes -->
+<section class="section">
+    <div class="container">
+        <div class="section-header">
+            <span class="section-tag">Guía de Inicio Rápido</span>
+            <h2 class="section-title">¿Cómo Ejecutar Este Proyecto en tu Computadora?</h2>
+            <p class="section-desc">
+                Sigue estos sencillos pasos en tu terminal para correr la aplicación localmente.
+            </p>
+        </div>
+
+        <div class="terminal-card">
+            <div class="terminal-header">
+                <div class="terminal-dots">
+                    <div class="terminal-dot dot-red"></div>
+                    <div class="terminal-dot dot-yellow"></div>
+                    <div class="terminal-dot dot-green"></div>
+                </div>
+                <span style="font-size: 0.8rem; color: var(--text-dim); font-family: var(--font-mono);">Terminal / PowerShell</span>
+            </div>
+            <div class="terminal-body">
+                <div class="code-line">
+                    <div><span class="code-prompt">1. Crear Entorno:</span> python -m venv .venv</div>
+                    <button class="copy-btn" data-copy="python -m venv .venv"><i class="fa-regular fa-copy"></i></button>
+                </div>
+                <div class="code-line">
+                    <div><span class="code-prompt">2. Activar Entorno (Windows):</span> .\.venv\Scripts\Activate.ps1</div>
+                    <button class="copy-btn" data-copy=".\.venv\Scripts\Activate.ps1"><i class="fa-regular fa-copy"></i></button>
+                </div>
+                <div class="code-line">
+                    <div><span class="code-prompt">3. Instalar Dependencias:</span> pip install -r requirements.txt</div>
+                    <button class="copy-btn" data-copy="pip install -r requirements.txt"><i class="fa-regular fa-copy"></i></button>
+                </div>
+                <div class="code-line">
+                    <div><span class="code-prompt">4. Iniciar Servidor:</span> python run.py</div>
+                    <button class="copy-btn" data-copy="python run.py"><i class="fa-regular fa-copy"></i></button>
+                </div>
+                <div class="code-line" style="background: rgba(16, 185, 129, 0.08); border-left: 3px solid #10b981;">
+                    <div style="color: #6ee7b7;"><span class="code-prompt">5. Abrir Navegador:</span> http://127.0.0.1:5000</div>
+                    <button class="copy-btn" data-copy="http://127.0.0.1:5000"><i class="fa-regular fa-copy"></i></button>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -1,0 +1,251 @@
+{% extends "base.html" %}
+
+{% block title %}{{ selected_level.title }} | InvestigaLab{% endblock %}
+
+{% block content %}
+<section class="section" style="padding-top: 40px;">
+    <div class="container">
+        
+        <!-- Cabecera de Niveles -->
+        <div class="section-header" style="margin-bottom: 24px;">
+            <span class="section-tag">Currículo Científico Completo</span>
+            <h1 class="section-title">Los 5 Niveles de la Investigación Científica</h1>
+            <p class="section-desc">
+                Formación rigurosa paso a paso con fundamentación en <strong>Mario Bunge, Karl Popper, Hernández-Sampieri, Fred Kerlinger y John Creswell</strong>.
+            </p>
+        </div>
+
+        <!-- Selector / Pestañas de los 5 Niveles -->
+        <div style="display: flex; gap: 12px; overflow-x: auto; padding-bottom: 16px; margin-bottom: 36px; justify-content: center; flex-wrap: wrap;">
+            {% for lvl in levels %}
+            <a href="{{ url_for('main.levels', level_id=lvl.id) }}" 
+               class="btn {% if lvl.id == selected_level.id %}btn-primary{% else %}btn-secondary{% endif %}"
+               style="border-radius: var(--radius-full); font-size: 0.9rem; padding: 8px 20px;">
+               <i class="fa-solid {{ lvl.icon }}"></i> {{ lvl.badge }}: {{ lvl.difficulty }}
+            </a>
+            {% endfor %}
+        </div>
+
+        <!-- Tarjeta Principal del Nivel Seleccionado -->
+        <div class="level-card" style="--level-color: {{ selected_level.color }}; border-color: {{ selected_level.color }}; background: rgba(17, 24, 39, 0.85); margin-bottom: 36px;">
+            <div class="level-card-header">
+                <div>
+                    <span class="level-badge" style="background: rgba(255, 255, 255, 0.1); color: {{ selected_level.color }}; font-size: 0.85rem;">
+                        {{ selected_level.badge }} • {{ selected_level.difficulty }}
+                    </span>
+                    <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-top: 8px;">
+                        {{ selected_level.title }}
+                    </h2>
+                </div>
+                <div class="level-icon-wrap" style="width: 60px; height: 60px; font-size: 1.8rem;">
+                    <i class="fa-solid {{ selected_level.icon }}"></i>
+                </div>
+            </div>
+
+            <p style="font-size: 1.08rem; color: var(--text-main); margin-bottom: 16px; line-height: 1.7;">
+                {{ selected_level.summary }}
+            </p>
+
+            <div class="level-meta" style="font-size: 0.95rem;">
+                <span><i class="fa-regular fa-clock" style="color: {{ selected_level.color }};"></i> <strong>Carga estimada:</strong> {{ selected_level.duration }}</span>
+                <span><i class="fa-solid fa-list-check" style="color: {{ selected_level.color }};"></i> <strong>Contenido:</strong> {{ selected_level.modules|length }} Módulos Teórico-Prácticos</span>
+            </div>
+        </div>
+
+        <!-- Fundamentación Epistemológica & Citas de Libros Clásicos -->
+        {% if selected_level.book_references %}
+        <div style="margin-bottom: 40px;">
+            <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-bottom: 18px;">
+                <i class="fa-solid fa-book-bookmark" style="color: #38bdf8;"></i> Fundamentación en Libros Canónicos de Metodología
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 18px;">
+                {% for ref in selected_level.book_references %}
+                <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-left: 4px solid var(--primary); border-radius: var(--radius-md); padding: 18px;">
+                    <div style="display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 6px;">
+                        <strong style="color: #fff; font-size: 0.95rem;">{{ ref.author }}</strong>
+                        <span style="font-size: 0.75rem; color: var(--secondary);">{{ ref.chapter }}</span>
+                    </div>
+                    <p style="font-size: 0.85rem; color: #a5b4fc; font-style: italic; margin-bottom: 10px;">
+                        "{{ ref.book }}"
+                    </p>
+                    <blockquote style="font-size: 0.88rem; color: var(--text-muted); line-height: 1.6; border-top: 1px solid rgba(255, 255, 255, 0.05); padding-top: 8px;">
+                        «{{ ref.quote }}»
+                    </blockquote>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Desglose de Módulos del Nivel -->
+        <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-bottom: 24px;">
+            <i class="fa-solid fa-graduation-cap" style="color: {{ selected_level.color }};"></i> Módulos Formativos Detallados
+        </h3>
+
+        <div style="display: flex; flex-direction: column; gap: 28px; margin-bottom: 48px;">
+            {% for mod in selected_level.modules %}
+            <div class="level-card" style="--level-color: {{ selected_level.color }}; background: rgba(15, 23, 42, 0.75);">
+                <h4 style="font-family: var(--font-heading); font-size: 1.3rem; color: #fff; margin-bottom: 10px;">
+                    {{ mod.title }}
+                </h4>
+                <p style="color: var(--text-muted); margin-bottom: 16px; font-size: 0.95rem;">
+                    {{ mod.description }}
+                </p>
+
+                <!-- Desarrollo Teórico Detallado -->
+                {% if mod.theoretical_deepening %}
+                <div style="background: rgba(0, 0, 0, 0.35); border-left: 3px solid {{ selected_level.color }}; border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 20px; font-size: 0.95rem; color: #f3f4f6; line-height: 1.75;">
+                    <strong style="color: {{ selected_level.color }}; display: block; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 6px;">
+                        <i class="fa-solid fa-atom"></i> Desarrollo Teórico & Metodológico:
+                    </strong>
+                    {{ mod.theoretical_deepening }}
+                </div>
+                {% endif %}
+
+                <!-- Puntos Clave -->
+                <div style="background: rgba(255, 255, 255, 0.03); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 18px; margin-bottom: 18px;">
+                    <strong style="color: #a5b4fc; font-size: 0.85rem; text-transform: uppercase; letter-spacing: 0.5px; display: block; margin-bottom: 10px;">
+                        <i class="fa-solid fa-key"></i> Conceptos y Procedimientos Clave:
+                    </strong>
+                    <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem; color: var(--text-main);">
+                        {% for item in mod.key_takeaways %}
+                        <li><i class="fa-solid fa-circle-check" style="color: {{ selected_level.color }}; font-size: 0.8rem; margin-right: 8px;"></i> {{ item }}</li>
+                        {% endfor %}
+                    </ul>
+                </div>
+
+                <!-- Taller / Actividad Práctica -->
+                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.3); border-radius: var(--radius-md); padding: 16px 20px;">
+                    <strong style="color: #6ee7b7; font-size: 0.9rem; display: flex; align-items: center; gap: 8px; margin-bottom: 6px;">
+                        <i class="fa-solid fa-flask-vial"></i> Taller / Reto Práctico del Estudiante:
+                    </strong>
+                    <p style="font-size: 0.92rem; color: #e5e7eb;">{{ mod.practical_activity }}</p>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+
+        <!-- Caso de Estudio Aplicado -->
+        <div class="level-card" style="--level-color: #38bdf8; background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8)); border-color: rgba(56, 189, 248, 0.3); margin-bottom: 40px;">
+            <div class="level-card-header">
+                <span class="level-badge" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1);">Caso Real Aplicado</span>
+                <i class="fa-solid fa-magnifying-glass-chart" style="font-size: 1.5rem; color: #38bdf8;"></i>
+            </div>
+            <h4 style="font-family: var(--font-heading); font-size: 1.3rem; color: #fff; margin-bottom: 12px;">
+                {{ selected_level.example_case.title }}
+            </h4>
+            <p style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 12px;">
+                <strong>Contexto inicial:</strong> {{ selected_level.example_case.context }}
+            </p>
+            <div style="background: rgba(0, 0, 0, 0.35); padding: 18px; border-radius: var(--radius-sm); border-left: 4px solid #38bdf8; font-size: 0.92rem; color: #bae6fd; white-space: pre-line; line-height: 1.7;">
+                <strong>Formulación Rigurosa:</strong>
+                {{ selected_level.example_case.transformation }}
+            </div>
+        </div>
+
+        <!-- Cuestionario Interactivo de Autoevaluación -->
+        {% if selected_level.quiz %}
+        <div class="level-card" style="--level-color: #10b981; background: rgba(17, 24, 39, 0.9); margin-bottom: 40px;">
+            <div class="level-card-header">
+                <div>
+                    <span class="level-badge" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">Autoevaluación Formativa</span>
+                    <h3 style="font-family: var(--font-heading); font-size: 1.4rem; color: #fff; margin-top: 8px;">
+                        <i class="fa-solid fa-circle-question" style="color: #10b981;"></i> Comprueba tus Conocimientos ({{ selected_level.badge }})
+                    </h3>
+                </div>
+                <div class="level-icon-wrap" style="color: #10b981;">
+                    <i class="fa-solid fa-clipboard-check"></i>
+                </div>
+            </div>
+
+            <div style="display: flex; flex-direction: column; gap: 24px;">
+                {% for q in selected_level.quiz %}
+                {% set q_idx = loop.index0 %}
+                <div class="quiz-item" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px;">
+                    <h5 style="font-size: 1.05rem; color: #fff; margin-bottom: 14px;">
+                        <strong>{{ loop.index }}.</strong> {{ q.question }}
+                    </h5>
+
+                    <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 14px;">
+                        {% for opt in q.options %}
+                        <label style="display: flex; align-items: flex-start; gap: 10px; background: rgba(255, 255, 255, 0.03); padding: 10px 14px; border-radius: var(--radius-sm); cursor: pointer; transition: background 0.2s; font-size: 0.92rem;">
+                            <input type="radio" name="quiz_{{ selected_level.id }}_{{ q_idx }}" value="{{ loop.index0 }}" style="margin-top: 4px;">
+                            <span>{{ opt }}</span>
+                        </label>
+                        {% endfor %}
+                    </div>
+
+                    <button class="btn btn-secondary check-quiz-btn" 
+                            data-level="{{ selected_level.id }}" 
+                            data-qidx="{{ q_idx }}" 
+                            data-correct="{{ q.correct_index }}" 
+                            data-explanation="{{ q.explanation }}"
+                            style="padding: 6px 16px; font-size: 0.85rem;">
+                        <i class="fa-solid fa-check"></i> Verificar Respuesta
+                    </button>
+
+                    <div id="feedback_{{ selected_level.id }}_{{ q_idx }}" style="display: none; margin-top: 12px; padding: 12px 16px; border-radius: var(--radius-sm); font-size: 0.9rem;"></div>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Botones de Navegación entre Vistas -->
+        <div style="display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; gap: 16px;">
+            <a href="{{ url_for('main.biblioteca_view') }}" class="btn btn-secondary">
+                <i class="fa-solid fa-book-bookmark"></i> Consultar Libros en la Biblioteca
+            </a>
+            <a href="{{ url_for('main.matriz_view') }}" class="btn btn-accent">
+                <i class="fa-solid fa-table-cells"></i> Aplicar en la Matriz Científica
+            </a>
+            <a href="{{ url_for('main.pipeline_view') }}" class="btn btn-primary">
+                <i class="fa-solid fa-diagram-project"></i> Ver Pipeline Archify
+            </a>
+        </div>
+
+    </div>
+</section>
+{% endblock %}
+
+{% block scripts %}
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const checkButtons = document.querySelectorAll(".check-quiz-btn");
+    checkButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const levelId = btn.getAttribute("data-level");
+            const qIdx = btn.getAttribute("data-qidx");
+            const correctIdx = parseInt(btn.getAttribute("data-correct"), 10);
+            const explanation = btn.getAttribute("data-explanation");
+            const feedbackDiv = document.getElementById(`feedback_${levelId}_${qIdx}`);
+
+            const selectedOption = document.querySelector(`input[name="quiz_${levelId}_${qIdx}"]:checked`);
+            if (!selectedOption) {
+                feedbackDiv.style.display = "block";
+                feedbackDiv.style.background = "rgba(245, 158, 11, 0.15)";
+                feedbackDiv.style.color = "#fbbf24";
+                feedbackDiv.style.border = "1px solid rgba(245, 158, 11, 0.3)";
+                feedbackDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Por favor selecciona una opción antes de verificar.';
+                return;
+            }
+
+            const chosenIdx = parseInt(selectedOption.value, 10);
+            feedbackDiv.style.display = "block";
+            if (chosenIdx === correctIdx) {
+                feedbackDiv.style.background = "rgba(16, 185, 129, 0.15)";
+                feedbackDiv.style.color = "#6ee7b7";
+                feedbackDiv.style.border = "1px solid rgba(16, 185, 129, 0.4)";
+                feedbackDiv.innerHTML = `<strong><i class="fa-solid fa-circle-check"></i> ¡Excelente y Correcto!</strong><br>${explanation}`;
+            } else {
+                feedbackDiv.style.background = "rgba(239, 68, 68, 0.15)";
+                feedbackDiv.style.color = "#fca5a5";
+                feedbackDiv.style.border = "1px solid rgba(239, 68, 68, 0.4)";
+                feedbackDiv.innerHTML = `<strong><i class="fa-solid fa-circle-xmark"></i> Respuesta incorrecta.</strong><br>${explanation}`;
+            }
+        });
+    });
+});
+</script>
+{% endblock %}
