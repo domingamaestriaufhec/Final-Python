@@ -104,7 +104,8 @@ En tu terminal verás un mensaje similar a este:
 =======================================================
 🚀 InvestigaLab: Curso de Metodología de la Investigación
 📡 Servidor activo en: http://127.0.0.1:5000
-🔬 Pestaña Pipeline Archify: http://127.0.0.1:5000/pipeline
+📚 Explorador de Niveles: http://127.0.0.1:5000/niveles
+📖 Biblioteca de Autores: http://127.0.0.1:5000/biblioteca
 📝 Matriz de Consistencia: http://127.0.0.1:5000/matriz
 =======================================================
 ```
@@ -117,7 +118,7 @@ Abre tu navegador web favorito (Chrome, Edge, Firefox, Brave) e ingresa a:
 
 👉 **[http://127.0.0.1:5000](http://127.0.0.1:5000)** (o `http://localhost:5000`)
 
-¡Listo! Ya puedes explorar los **5 Niveles Científicos**, el **Generador de Matriz de Consistencia** y la visualización de arquitectura **Pipeline Archify**.
+¡Listo! Ya puedes explorar los **5 Niveles del Curso Científico**, sus **Materiales y Recursos Interactivos**, la **Biblioteca Canónica de Autores** y el **Generador de Matriz de Consistencia**.
 
 ---
 

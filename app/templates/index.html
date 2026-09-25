@@ -20,13 +20,13 @@
 
                 <div class="hero-actions">
                     <a href="{{ url_for('main.levels') }}" class="btn btn-primary">
-                        <i class="fa-solid fa-compass"></i> Explorar los 5 Niveles
+                        <i class="fa-solid fa-compass"></i> Explorar los 5 Niveles del Curso
                     </a>
                     <a href="{{ url_for('main.matriz_view') }}" class="btn btn-accent">
-                        <i class="fa-solid fa-table-cells"></i> Matriz Metodológica
+                        <i class="fa-solid fa-table-cells"></i> Matriz Científica Viva
                     </a>
-                    <a href="{{ url_for('main.pipeline_view') }}" class="btn btn-secondary">
-                        <i class="fa-solid fa-diagram-project"></i> Pipeline Archify
+                    <a href="{{ url_for('main.biblioteca_view') }}" class="btn btn-secondary">
+                        <i class="fa-solid fa-book-bookmark"></i> Libros & Autores Canónicos
                     </a>
                 </div>
             </div>
@@ -49,8 +49,8 @@
                 <div class="stat-label">Módulos & Talleres Prácticos</div>
             </div>
             <div class="stat-card">
-                <div class="stat-number">100%</div>
-                <div class="stat-label">Python & Arquitectura Limpia</div>
+                <div class="stat-number">7</div>
+                <div class="stat-label">Libros Clásicos de Metodología</div>
             </div>
             <div class="stat-card">
                 <div class="stat-number">IMRyD</div>
@@ -101,7 +101,7 @@
                 <ul style="list-style: none; font-size: 0.88rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
                     <li><i class="fa-solid fa-check" style="color: #10b981;"></i> 5 niveles claros: Principiante, Básico, Intermedio, Avanzado y Experto.</li>
                     <li><i class="fa-solid fa-check" style="color: #10b981;"></i> Generador de Matriz de Consistencia Científica interactivo.</li>
-                    <li><i class="fa-solid fa-check" style="color: #10b981;"></i> Visualización del Pipeline de software con el estándar de Archify.</li>
+                    <li><i class="fa-solid fa-check" style="color: #10b981;"></i> Recursos, guías descargables y fundamentación bibliográfica canónica.</li>
                 </ul>
             </div>
         </div>
@@ -135,7 +135,7 @@
                 </div>
 
                 <a href="{{ url_for('main.levels', level_id=lvl.id) }}" class="btn btn-secondary" style="width: 100%; justify-content: center;">
-                    Ver Módulos & Casos <i class="fa-solid fa-arrow-right"></i>
+                    Desglosar Curso & Recursos <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
             {% endfor %}
@@ -143,57 +143,53 @@
     </div>
 </section>
 
-<!-- Sección 3: Arquitectura & Pipeline (Archify) -->
+<!-- Sección 3: Biblioteca & Autores Canónicos -->
 <section class="section" style="background: rgba(15, 23, 42, 0.6); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
     <div class="container">
         <div class="section-header">
-            <span class="section-tag">Ingeniería & Pipeline</span>
-            <h2 class="section-title">Arquitectura del Proyecto (Estilo Archify)</h2>
+            <span class="section-tag" style="color: #10b981;">Fundamento Teórico</span>
+            <h2 class="section-title">Biblioteca de Autores & Obras Canónicas</h2>
             <p class="section-desc">
-                Documentación del flujo de procesamiento técnico y metodológico siguiendo los principios de <a href="https://github.com/tt-a1i/archify.git" target="_blank" style="color: var(--secondary); text-decoration: underline;">Archify</a>.
+                El rigor científico del curso se fundamenta en las obras y principios epistemológicos de los máximos referentes mundiales.
             </p>
         </div>
 
-        <div class="vector-frame" style="margin-bottom: 32px;">
-            <img src="{{ url_for('static', filename='images/pipeline_archify_art.png') }}" 
-                 alt="Diagrama Vectorial Pipeline Archify" 
-                 class="vector-img">
-        </div>
-
-        <div class="pipeline-container">
-            <div class="pipeline-header">
-                <div>
-                    <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 4px;">Pipeline de Ejecución Flask + Capa Científica</h3>
-                    <p style="font-size: 0.88rem; color: var(--text-muted);">Desacoplamiento total entre la infraestructura de Python y el dominio científico.</p>
-                </div>
-                <span class="archify-badge"><i class="fa-solid fa-diagram-project"></i> Pipeline Activo</span>
-            </div>
-
-
-            <div class="pipeline-flow">
-                {% for stage in pipeline.app_pipeline_stages[:3] %}
-                <div class="stage-card">
-                    <div class="stage-number">{{ stage.number }}</div>
-                    <div class="stage-info">
-                        <h4>{{ stage.name }}</h4>
-                        <span class="stage-component">{{ stage.component }}</span>
-                    </div>
-                    <div class="stage-io">
-                        <p style="margin-bottom: 6px;">{{ stage.description }}</p>
-                        <div>
-                            <span class="io-tag">In: {{ stage.inputs[0] }}</span>
-                            <span class="io-tag" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">Out: {{ stage.outputs[0] }}</span>
-                        </div>
-                    </div>
-                </div>
-                {% endfor %}
-            </div>
-
-            <div style="text-align: center; margin-top: 28px;">
-                <a href="{{ url_for('main.pipeline_view') }}" class="btn btn-primary">
-                    <i class="fa-solid fa-network-wired"></i> Abrir Vista Completa del Pipeline Archify
+        <div class="levels-grid">
+            <div class="level-card" style="--level-color: #3b82f6;">
+                <span class="level-badge" style="color: #3b82f6;"><i class="fa-solid fa-atom"></i> Epistemología</span>
+                <h3 class="level-card-title">Mario Bunge</h3>
+                <p class="level-card-subtitle" style="color: #a5b4fc; margin-bottom: 6px;">La ciencia: su método y su filosofía</p>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Distinción entre ciencias formales y fácticas, leyes científicas y las 15 propiedades del conocimiento metódico.</p>
+                <a href="{{ url_for('main.biblioteca_view') }}" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+                    Ver en Biblioteca <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
+
+            <div class="level-card" style="--level-color: #10b981;">
+                <span class="level-badge" style="color: #10b981;"><i class="fa-solid fa-filter"></i> Falsacionismo</span>
+                <h3 class="level-card-title">Karl R. Popper</h3>
+                <p class="level-card-subtitle" style="color: #a5b4fc; margin-bottom: 6px;">La lógica de la investigación científica</p>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">El problema de la inducción, conjeturas audaces y el criterio de falsabilidad empírica.</p>
+                <a href="{{ url_for('main.biblioteca_view') }}" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+                    Ver en Biblioteca <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+
+            <div class="level-card" style="--level-color: #f59e0b;">
+                <span class="level-badge" style="color: #f59e0b;"><i class="fa-solid fa-book"></i> Metodología Iberoamericana</span>
+                <h3 class="level-card-title">R. Hernández-Sampieri</h3>
+                <p class="level-card-subtitle" style="color: #a5b4fc; margin-bottom: 6px;">Metodología de la investigación</p>
+                <p style="font-size: 0.88rem; color: var(--text-muted); margin-bottom: 12px;">Rutas cuantitativa, cualitativa y mixta, formulación de hipótesis y matrices de congruencia.</p>
+                <a href="{{ url_for('main.biblioteca_view') }}" class="btn btn-secondary" style="width: 100%; justify-content: center; font-size: 0.85rem;">
+                    Ver en Biblioteca <i class="fa-solid fa-arrow-right"></i>
+                </a>
+            </div>
+        </div>
+
+        <div style="text-align: center; margin-top: 28px;">
+            <a href="{{ url_for('main.biblioteca_view') }}" class="btn btn-primary">
+                <i class="fa-solid fa-book-bookmark"></i> Explorar Toda la Biblioteca & Autores
+            </a>
         </div>
     </div>
 </section>

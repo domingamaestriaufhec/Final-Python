@@ -3,7 +3,7 @@
 {% block title %}{{ selected_level.title }} | InvestigaLab{% endblock %}
 
 {% block content %}
-<section class="section" style="padding-top: 40px;">
+<section class="section theme-{{ selected_level.id }}" style="padding-top: 40px;">
     <div class="container">
         
         <!-- Cabecera de Niveles -->
@@ -27,10 +27,10 @@
         </div>
 
         <!-- Tarjeta Principal del Nivel Seleccionado -->
-        <div class="level-card" style="--level-color: {{ selected_level.color }}; border-color: {{ selected_level.color }}; background: rgba(17, 24, 39, 0.85); margin-bottom: 36px;">
+        <div class="level-card lvl-border" style="background: rgba(17, 24, 39, 0.85); margin-bottom: 36px;">
             <div class="level-card-header">
                 <div>
-                    <span class="level-badge" style="background: rgba(255, 255, 255, 0.1); color: {{ selected_level.color }}; font-size: 0.85rem;">
+                    <span class="level-badge lvl-badge-bg" style="font-size: 0.85rem;">
                         {{ selected_level.badge }} • {{ selected_level.difficulty }}
                     </span>
                     <h2 style="font-family: var(--font-heading); font-size: 2rem; color: #fff; margin-top: 8px;">
@@ -38,7 +38,7 @@
                     </h2>
                 </div>
                 <div class="level-icon-wrap" style="width: 60px; height: 60px; font-size: 1.8rem;">
-                    <i class="fa-solid {{ selected_level.icon }}"></i>
+                    <i class="fa-solid {{ selected_level.icon }} lvl-color"></i>
                 </div>
             </div>
 
@@ -47,8 +47,8 @@
             </p>
 
             <div class="level-meta" style="font-size: 0.95rem;">
-                <span><i class="fa-regular fa-clock" style="color: {{ selected_level.color }};"></i> <strong>Carga estimada:</strong> {{ selected_level.duration }}</span>
-                <span><i class="fa-solid fa-list-check" style="color: {{ selected_level.color }};"></i> <strong>Contenido:</strong> {{ selected_level.modules|length }} Módulos Teórico-Prácticos</span>
+                <span><i class="fa-regular fa-clock lvl-color"></i> <strong>Carga estimada:</strong> {{ selected_level.duration }}</span>
+                <span><i class="fa-solid fa-list-check lvl-color"></i> <strong>Contenido:</strong> {{ selected_level.modules|length }} Módulos Teórico-Prácticos</span>
             </div>
         </div>
 
@@ -80,12 +80,12 @@
 
         <!-- Desglose de Módulos del Nivel -->
         <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-bottom: 24px;">
-            <i class="fa-solid fa-graduation-cap" style="color: {{ selected_level.color }};"></i> Módulos Formativos Detallados
+            <i class="fa-solid fa-graduation-cap lvl-color"></i> Módulos Formativos Detallados
         </h3>
 
         <div style="display: flex; flex-direction: column; gap: 28px; margin-bottom: 48px;">
             {% for mod in selected_level.modules %}
-            <div class="level-card" style="--level-color: {{ selected_level.color }}; background: rgba(15, 23, 42, 0.75);">
+            <div class="level-card" style="background: rgba(15, 23, 42, 0.75);">
                 <h4 style="font-family: var(--font-heading); font-size: 1.3rem; color: #fff; margin-bottom: 10px;">
                     {{ mod.title }}
                 </h4>
@@ -95,8 +95,8 @@
 
                 <!-- Desarrollo Teórico Detallado -->
                 {% if mod.theoretical_deepening %}
-                <div style="background: rgba(0, 0, 0, 0.35); border-left: 3px solid {{ selected_level.color }}; border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 20px; font-size: 0.95rem; color: #f3f4f6; line-height: 1.75;">
-                    <strong style="color: {{ selected_level.color }}; display: block; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 6px;">
+                <div class="lvl-border-left" style="background: rgba(0, 0, 0, 0.35); border-radius: var(--radius-sm); padding: 16px 20px; margin-bottom: 20px; font-size: 0.95rem; color: #f3f4f6; line-height: 1.75;">
+                    <strong class="lvl-color" style="display: block; font-size: 0.85rem; text-transform: uppercase; margin-bottom: 6px;">
                         <i class="fa-solid fa-atom"></i> Desarrollo Teórico & Metodológico:
                     </strong>
                     {{ mod.theoretical_deepening }}
@@ -110,7 +110,7 @@
                     </strong>
                     <ul style="list-style: none; display: flex; flex-direction: column; gap: 8px; font-size: 0.92rem; color: var(--text-main);">
                         {% for item in mod.key_takeaways %}
-                        <li><i class="fa-solid fa-circle-check" style="color: {{ selected_level.color }}; font-size: 0.8rem; margin-right: 8px;"></i> {{ item }}</li>
+                        <li><i class="fa-solid fa-circle-check lvl-color" style="font-size: 0.8rem; margin-right: 8px;"></i> {{ item }}</li>
                         {% endfor %}
                     </ul>
                 </div>
@@ -127,7 +127,7 @@
         </div>
 
         <!-- Caso de Estudio Aplicado -->
-        <div class="level-card" style="--level-color: #38bdf8; background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8)); border-color: rgba(56, 189, 248, 0.3); margin-bottom: 40px;">
+        <div class="level-card" style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(30, 41, 59, 0.8)); border-color: rgba(56, 189, 248, 0.3); margin-bottom: 40px;">
             <div class="level-card-header">
                 <span class="level-badge" style="color: #38bdf8; background: rgba(56, 189, 248, 0.1);">Caso Real Aplicado</span>
                 <i class="fa-solid fa-magnifying-glass-chart" style="font-size: 1.5rem; color: #38bdf8;"></i>
@@ -146,7 +146,7 @@
 
         <!-- Cuestionario Interactivo de Autoevaluación -->
         {% if selected_level.quiz %}
-        <div class="level-card" style="--level-color: #10b981; background: rgba(17, 24, 39, 0.9); margin-bottom: 40px;">
+        <div class="level-card" style="background: rgba(17, 24, 39, 0.9); border-color: rgba(16, 185, 129, 0.4); margin-bottom: 40px;">
             <div class="level-card-header">
                 <div>
                     <span class="level-badge" style="color: #10b981; background: rgba(16, 185, 129, 0.1);">Autoevaluación Formativa</span>
@@ -192,16 +192,76 @@
         </div>
         {% endif %}
 
+        <!-- Materiales, Recursos & Plantillas del Nivel -->
+        {% if selected_level.course_materials %}
+        <div style="margin-bottom: 40px;">
+            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; flex-wrap: wrap; gap: 10px;">
+                <h3 style="font-family: var(--font-heading); font-size: 1.45rem; color: #fff;">
+                    <i class="fa-solid fa-folder-open" style="color: #f59e0b;"></i> Materiales & Recursos del Curso ({{ selected_level.badge }})
+                </h3>
+                <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600;">
+                    Recursos Disponibles
+                </span>
+            </div>
+
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 18px;">
+                {% for mat in selected_level.course_materials %}
+                <div class="lvl-border-top" style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-radius: var(--radius-md); padding: 20px; display: flex; flex-direction: column; justify-content: space-between;">
+                    <div>
+                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 10px;">
+                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #a5b4fc; font-weight: 700; background: rgba(99, 102, 241, 0.15); padding: 3px 8px; border-radius: 4px;">
+                                {{ mat.type }}
+                            </span>
+                            <i class="fa-solid {{ mat.icon }} lvl-color" style="font-size: 1.2rem;"></i>
+                        </div>
+                        <h4 style="color: #fff; font-size: 1.05rem; margin-bottom: 8px;">
+                            {{ mat.title }}
+                        </h4>
+                        <p style="color: var(--text-muted); font-size: 0.88rem; line-height: 1.6; margin-bottom: 16px;">
+                            {{ mat.description }}
+                        </p>
+                    </div>
+                    <button class="btn btn-secondary copy-btn" data-copy="{{ mat.title }} - {{ mat.description }}" style="width: 100%; justify-content: center; font-size: 0.85rem; padding: 8px 14px;">
+                        <i class="fa-solid fa-download"></i> {{ mat.action }}
+                    </button>
+                </div>
+                {% endfor %}
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Navegación entre Niveles Anterior y Siguiente -->
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 36px; padding: 20px; background: rgba(17, 24, 39, 0.6); border: 1px solid var(--border-color); border-radius: var(--radius-md); flex-wrap: wrap; gap: 14px;">
+            <div>
+                {% if prev_level %}
+                <a href="{{ url_for('main.levels', level_id=prev_level.id) }}" class="btn btn-secondary" style="border-radius: var(--radius-full);">
+                    <i class="fa-solid fa-arrow-left"></i> Nivel Anterior: {{ prev_level.badge }} ({{ prev_level.difficulty }})
+                </a>
+                {% else %}
+                <span style="color: var(--text-dim); font-size: 0.88rem;"><i class="fa-solid fa-flag-checkered"></i> Primer Nivel de la Ruta</span>
+                {% endif %}
+            </div>
+            <div>
+                {% if next_level %}
+                <a href="{{ url_for('main.levels', level_id=next_level.id) }}" class="btn btn-primary" style="border-radius: var(--radius-full);">
+                    Siguiente Nivel: {{ next_level.badge }} ({{ next_level.difficulty }}) <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                {% else %}
+                <span style="color: #10b981; font-weight: 600; font-size: 0.88rem;"><i class="fa-solid fa-trophy"></i> ¡Has completado la ruta formativa!</span>
+                {% endif %}
+            </div>
+        </div>
+
         <!-- Botones de Navegación entre Vistas -->
-        <div style="display: flex; justify-content: space-between; margin-top: 30px; flex-wrap: wrap; gap: 16px;">
+        <div style="display: flex; justify-content: space-between; margin-top: 10px; flex-wrap: wrap; gap: 16px;">
             <a href="{{ url_for('main.biblioteca_view') }}" class="btn btn-secondary">
                 <i class="fa-solid fa-book-bookmark"></i> Consultar Libros en la Biblioteca
             </a>
             <a href="{{ url_for('main.matriz_view') }}" class="btn btn-accent">
                 <i class="fa-solid fa-table-cells"></i> Aplicar en la Matriz Científica
             </a>
-            <a href="{{ url_for('main.pipeline_view') }}" class="btn btn-primary">
-                <i class="fa-solid fa-diagram-project"></i> Ver Pipeline Archify
+            <a href="{{ url_for('main.index') }}" class="btn btn-primary">
+                <i class="fa-solid fa-house"></i> Volver al Inicio
             </a>
         </div>
 

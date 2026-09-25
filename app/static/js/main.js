@@ -11,6 +11,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // 3. Pestaña interactiva de Pipeline Archify (si está en la página /pipeline)
     initPipelineInspector();
+
+    // 4. Explorador interactivo de los 5 Niveles (en Landing Page o vistas estáticas)
+    initLevelsExplorer();
+
+    // 5. Verificador universal de Quizzes de autoevaluación
+    initQuizHandlers();
 });
 
 /**
@@ -134,6 +140,115 @@ function initPipelineInspector() {
         card.addEventListener("mouseleave", () => {
             card.style.borderColor = "";
             card.style.boxShadow = "";
+        });
+    });
+}
+
+/**
+ * Lógica del Explorador interactivo de los 5 niveles en la Landing Page
+ */
+function initLevelsExplorer() {
+    const tabButtons = document.querySelectorAll(".level-tab-btn");
+    const levelPanels = document.querySelectorAll(".level-panel");
+    const openLevelBtns = document.querySelectorAll(".open-level-btn");
+
+    function activateLevel(targetLevelId) {
+        if (!targetLevelId) return;
+
+        // Actualizar botones de pestaña
+        tabButtons.forEach(btn => {
+            const btnTarget = btn.getAttribute("data-target-level");
+            if (btnTarget === targetLevelId) {
+                btn.classList.add("active");
+                btn.classList.remove("btn-secondary");
+                btn.classList.add("btn-primary");
+            } else {
+                btn.classList.remove("active");
+                btn.classList.add("btn-secondary");
+                btn.classList.remove("btn-primary");
+            }
+        });
+
+        // Actualizar paneles de contenido
+        levelPanels.forEach(panel => {
+            if (panel.id === `panel-${targetLevelId}`) {
+                panel.style.display = "block";
+                panel.classList.add("active-panel");
+            } else {
+                panel.style.display = "none";
+                panel.classList.remove("active-panel");
+            }
+        });
+    }
+
+    tabButtons.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const target = btn.getAttribute("data-target-level");
+            activateLevel(target);
+        });
+    });
+
+    openLevelBtns.forEach(btn => {
+        btn.addEventListener("click", (e) => {
+            e.preventDefault();
+            const target = btn.getAttribute("data-target-level");
+            activateLevel(target);
+            const explorerElement = document.getElementById("explorador-niveles");
+            if (explorerElement) {
+                explorerElement.scrollIntoView({ behavior: "smooth", block: "start" });
+            }
+        });
+    });
+
+    // Detectar si la URL tiene hash de nivel específico (#nivel-principiante, etc.)
+    const hash = window.location.hash.replace("#", "");
+    if (hash.startsWith("nivel-")) {
+        const levelId = hash.replace("nivel-", "");
+        activateLevel(levelId);
+    }
+}
+
+/**
+ * Manejador universal de respuestas en Quizzes interactivos
+ */
+function initQuizHandlers() {
+    const checkButtons = document.querySelectorAll(".check-quiz-btn");
+    checkButtons.forEach(btn => {
+        btn.addEventListener("click", () => {
+            const levelId = btn.getAttribute("data-level");
+            const qIdx = btn.getAttribute("data-qidx");
+            const correctIdx = parseInt(btn.getAttribute("data-correct"), 10);
+            const explanation = btn.getAttribute("data-explanation");
+            const feedbackDiv = document.getElementById(`feedback_${levelId}_${qIdx}`);
+
+            const selectedOption = document.querySelector(`input[name="quiz_${levelId}_${qIdx}"]:checked`);
+            if (!selectedOption) {
+                if (feedbackDiv) {
+                    feedbackDiv.style.display = "block";
+                    feedbackDiv.style.background = "rgba(245, 158, 11, 0.15)";
+                    feedbackDiv.style.color = "#fbbf24";
+                    feedbackDiv.style.border = "1px solid rgba(245, 158, 11, 0.3)";
+                    feedbackDiv.innerHTML = '<i class="fa-solid fa-circle-exclamation"></i> Por favor selecciona una opción antes de verificar.';
+                }
+                return;
+            }
+
+            const chosenIdx = parseInt(selectedOption.value, 10);
+            if (feedbackDiv) {
+                feedbackDiv.style.display = "block";
+                if (chosenIdx === correctIdx) {
+                    feedbackDiv.style.background = "rgba(16, 185, 129, 0.15)";
+                    feedbackDiv.style.color = "#6ee7b7";
+                    feedbackDiv.style.border = "1px solid rgba(16, 185, 129, 0.4)";
+                    feedbackDiv.innerHTML = `<strong><i class="fa-solid fa-circle-check"></i> ¡Excelente y Correcto!</strong><br>${explanation}`;
+                } else {
+                    feedbackDiv.style.background = "rgba(239, 68, 68, 0.15)";
+                    feedbackDiv.style.color = "#fca5a5";
+                    feedbackDiv.style.border = "1px solid rgba(239, 68, 68, 0.4)";
+                    feedbackDiv.innerHTML = `<strong><i class="fa-solid fa-circle-xmark"></i> Respuesta incorrecta.</strong><br>${explanation}`;
+                }
+            }
         });
     });
 }

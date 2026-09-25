@@ -33,11 +33,17 @@ def levels(level_id=None):
             abort(404)
             
     level_books = get_books_for_level(selected_level["id"])
+    current_idx = next((i for i, lvl in enumerate(all_levels) if lvl["id"] == selected_level["id"]), 0)
+    prev_level = all_levels[current_idx - 1] if current_idx > 0 else None
+    next_level = all_levels[current_idx + 1] if current_idx < len(all_levels) - 1 else None
+
     return render_template(
         "levels.html",
         levels=all_levels,
         selected_level=selected_level,
-        level_books=level_books
+        level_books=level_books,
+        prev_level=prev_level,
+        next_level=next_level
     )
 
 

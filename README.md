@@ -3,21 +3,27 @@
 [![Python 3.10+](https://img.shields.io/badge/Python-3.10%2B-blue.svg?logo=python&logoColor=white)](https://www.python.org/)
 [![Flask 3.0](https://img.shields.io/badge/Framework-Flask_3.0-000000.svg?logo=flask&logoColor=white)](https://flask.palletsprojects.com/)
 [![Render Live](https://img.shields.io/badge/Render-Live_Deployment-46E3B7.svg?logo=render&logoColor=white)](https://investigalab-python.onrender.com)
-[![Archify Pipeline](https://img.shields.io/badge/Architecture-Archify_Pipeline-6366f1.svg)](https://github.com/tt-a1i/archify.git)
+[![GitHub Repo](https://img.shields.io/badge/GitHub-Repository-181717.svg?logo=github&logoColor=white)](https://github.com/domingamaestriaufhec/Final-Python)
+[![GitHub Pages](https://img.shields.io/badge/GitHub_Pages-Static_App-22c55e.svg?logo=github&logoColor=white)](https://domingamaestriaufhec.github.io/Final-Python/)
 [![IDE](https://img.shields.io/badge/Environment-Google_Antigravity-orange.svg)](#)
 
 > Una aplicación web completa, interactiva y pedagógica desarrollada en **Python con Flask**, diseñada para guiar a estudiantes e investigadores desde sus primeros pasos hasta la publicación científica indexada en **5 niveles progresivos**.
 
 ---
 
-## 🌐 Enlaces Oficiales de Entrega
+## 🌐 Enlaces Oficiales del Proyecto
 
-* 🚀 **Despliegue Funcional en Vivo (Render):** [https://investigalab-python.onrender.com](https://investigalab-python.onrender.com)
-* 🐙 **Repositorio Oficial en GitHub:** [https://github.com/domingamaestriaufhec/Final-Python](https://github.com/domingamaestriaufhec/Final-Python)
-* 📓 **Cuaderno Jupyter con Modelos Matemáticos:** [`InvestigaLab_Metodologia_Cientifica.ipynb`](InvestigaLab_Metodologia_Cientifica.ipynb)
-* 🎬 **Guión para el Video de Sustentación:** [`docs/presentacion_sustentacion.md`](docs/presentacion_sustentacion.md)
-* 🛠️ **Entorno Agéntico de Desarrollo:** Google Antigravity IDE
-
+| Recurso | Enlace Directo | Descripción |
+| :--- | :--- | :--- |
+| 🚀 **Aplicación en Vivo (Render)** | [https://investigalab-python.onrender.com](https://investigalab-python.onrender.com) | Despliegue funcional en producción con backend Flask |
+| 🐙 **Repositorio Oficial en GitHub** | [https://github.com/domingamaestriaufhec/Final-Python](https://github.com/domingamaestriaufhec/Final-Python) | Código fuente completo, módulos y datos |
+| 📄 **GitHub Pages (Versión Estática)** | [https://domingamaestriaufhec.github.io/Final-Python/](https://domingamaestriaufhec.github.io/Final-Python/) | Landing page interactiva standalone |
+| 🎬 **Guión para Video de Sustentación** | [`docs/presentacion_sustentacion.md`](docs/presentacion_sustentacion.md) | Estructura y guión paso a paso de 5 a 8 minutos |
+| 📓 **Cuaderno Jupyter con Modelos** | [`InvestigaLab_Metodologia_Cientifica.ipynb`](InvestigaLab_Metodologia_Cientifica.ipynb) | Modelos matemáticos (Muestreo, Cronbach, Cohen) |
+| 📖 **Tutorial Paso a Paso (Principiantes)** | [`docs/tutorial.md`](docs/tutorial.md) | Guía de instalación y ejecución local desde cero |
+| 📑 **Documento Oficial de Entrega (.docx)** | [`Documento_Entrega_y_Sustentacion_InvestigaLab.docx`](Documento_Entrega_y_Sustentacion_InvestigaLab.docx) | Informe formal académico para la maestría |
+| 🤖 **Evidencia de Google Antigravity** | [`docs/evidencia_antigravity.md`](docs/evidencia_antigravity.md) | Registro del desarrollo agéntico asistido por IA |
+| 🏛️ **Arquitectura del Sistema** | [`docs/arquitectura.md`](docs/arquitectura.md) | Diagrama modular y desacoplamiento de capas |
 
 ---
 
@@ -27,17 +33,18 @@ La **Metodología de la Investigación** suele enseñarse mediante manuales abst
 
 **InvestigaLab** resuelve este problema ofreciendo:
 * Un mapa de ruta interactivo en **5 niveles de especialización**:
-  1. **Principiante:** Curiosidad empírica, qué es la ciencia y formulación de la pregunta inicial.
-  2. **Básico:** Búsqueda bibliográfica booleana, marco teórico, objetivos SMART e hipótesis ($H_0 / H_1$).
-  3. **Intermedio:** Enfoques (cuanti/cuali/mixto), muestreo representativo y matriz de operacionalización de variables.
-  4. **Avanzado:** Instrumentación (Alfa de Cronbach, V de Aiken), pruebas estadísticas (t-Student, ANOVA, Mann-Whitney) y triangulación.
-  5. **Experto:** Redacción IMRyD, bioética, selección de revistas (Scopus/JCR) y respuesta a revisores (peer review).
-* **Generador de Matriz de Consistencia Científica** en tiempo real con exportación a Markdown.
-* **Pestaña interactiva de Pipeline & Arquitectura**, estructurada con las buenas prácticas del repositorio [Archify](https://github.com/tt-a1i/archify.git).
+  1. **Nivel 1 • Principiante:** Fundamentos epistemológicos (Karl Popper, Mario Bunge) y delimitación del problema con Sampieri.
+  2. **Nivel 2 • Básico:** Búsqueda bibliográfica booleana (Scopus/SciELO), marco teórico en embudo, objetivos SMART e hipótesis ($H_0 / H_1$).
+  3. **Nivel 3 • Intermedio:** Enfoques (cuanti/cuali/mixto), principio MAXMINCON de Kerlinger, fórmulas de cálculo muestral ($n$) y matriz de operacionalización de variables.
+  4. **Nivel 4 • Avanzado:** Instrumentación psicométrica (Alfa de Cronbach $\alpha$, V de Aiken), árbol de decisión de normalidad (Shapiro-Wilk vs Kolmogorov-Smirnov) y tamaño del efecto ($d$ de Cohen).
+  5. **Nivel 5 • Experto:** Redacción científica IMRyD, bioética institucional (Belmont/Helsinki), directrices COPE sobre IA, selección de revistas indexadas (Q1-Q4) y cartas de réplica (*Rebuttal letters*).
+* **Generador de Matriz de Consistencia Científica** en tiempo real con validación y exportación a Markdown.
+* **Biblioteca Canónica de Autores & Obras**, con fundamentación directa en Bunge, Popper, Sampieri, Kerlinger y Creswell.
+* **Materiales, Plantillas y Fichas Descargables/Copiables** en cada uno de los 5 niveles del curso.
 
 ---
 
-## 🏗️ 2. Arquitectura & Pipeline (Inspiración Archify)
+## 🏗️ 2. Arquitectura del Sistema
 
 La aplicación sigue una arquitectura limpia desacoplada:
 
@@ -71,6 +78,9 @@ PYTHON/CURSOR/
 ├── requirements.txt            # Dependencias de Python (Flask, Jinja2, etc.)
 ├── README.md                   # Presentación y documentación general
 ├── run.py                      # Punto de entrada para ejecutar el servidor Flask
+├── Procfile                    # Comando de inicio para despliegue en Render
+├── InvestigaLab_Metodologia_Cientifica.ipynb # Cuaderno Jupyter interactivo
+├── Documento_Entrega_y_Sustentacion_InvestigaLab.docx # Documento formal de entrega
 ├── .agents/
 │   └── skills/
 │       └── flask-docs-architect/ # Skill especializada de arquitectura y documentación Flask
@@ -79,9 +89,8 @@ PYTHON/CURSOR/
 │   ├── __init__.py             # Factoría de la aplicación Flask
 │   ├── routes.py               # Controladores y rutas web
 │   ├── data/
-│   │   ├── levels_data.py      # Datos pedagógicos de los 5 niveles científicos y quizzes
-│   │   ├── books_data.py       # Catálogo de libros y autores clásicos de metodología
-│   │   └── pipeline_data.py    # Datos del pipeline de arquitectura Archify
+│   │   ├── levels_data.py      # Datos pedagógicos de los 5 niveles científicos, recursos y quizzes
+│   │   └── books_data.py       # Catálogo de libros y autores clásicos de metodología
 │   ├── static/
 │   │   ├── css/
 │   │   │   └── style.css       # Estilos modernos, responsivos y modo oscuro
@@ -89,28 +98,27 @@ PYTHON/CURSOR/
 │   │   │   └── main.js         # Lógica interactiva (matriz, copiado, tabs, quizzes)
 │   │   └── images/
 │   │       ├── hero_scientific_vector.png
-│   │       ├── pipeline_archify_art.png
 │   │       └── matrix_consistency_art.png
 │   └── templates/
 │       ├── base.html           # Layout común (Navbar, Footer)
 │       ├── index.html          # Landing page principal dentro de Flask
-│       ├── levels.html         # Vista detallada de los 5 niveles del curso con quizzes
+│       ├── levels.html         # Vista detallada de los 5 niveles del curso con recursos y quizzes
 │       ├── books.html          # Vista de la Biblioteca de Autores y Libros Clásicos
-│       ├── pipeline.html       # Pestaña interactiva de Pipeline Archify
 │       ├── matriz.html         # Generador de Matriz de Consistencia Metodológica
 │       └── 404.html            # Manejador visual de error 404
 └── docs/
     ├── tutorial.md             # Guía paso a paso para principiantes
+    ├── presentacion_sustentacion.md # Guión oficial de presentación para el video
     ├── arquitectura.md         # Documentación detallada de arquitectura
+    ├── evidencia_antigravity.md # Informe de desarrollo agéntico con Google Antigravity
     ├── images/
     │   └── arquitectura.png    # Imagen del diagrama de arquitectura
-    └── documentacion/          # Manuales detallados de buenas prácticas con Flask
+    └── documentacion/          # Manuales técnicos de buenas prácticas con Flask
         ├── 01_arquitectura_y_patrones.md
         ├── 02_estructura_y_modulos.md
         ├── 03_guia_desarrollo_flask.md
         ├── 04_metodologia_cientifica_curriculo.md
-        ├── 05_despliegue_y_produccion.md
-        └── 06_pipeline_archify.md
+        └── 05_despliegue_y_produccion.md
 ```
 
 ---
@@ -119,8 +127,8 @@ PYTHON/CURSOR/
 
 ### 1. Clonar o abrir el repositorio
 ```bash
-git clone <URL_DEL_REPOSITORIO>
-cd <CARPETA_DEL_PROYECTO>
+git clone https://github.com/domingamaestriaufhec/Final-Python.git
+cd Final-Python
 ```
 
 ### 2. Crear y activar el entorno virtual
@@ -161,15 +169,25 @@ Una de las ventajas clave de esta estructura es que la **Capa Técnica** y la **
 | **Técnica** | Python, `.venv`, Flask, Rutas, Jinja2, CSS, Git | Infraestructura reutilizable para cualquier proyecto web. |
 | **Idea** | `app/data/levels_data.py`, Textos pedagógicos | Contenido específico del curso de Metodología Científica. |
 
-### 🔄 ¿Cómo transformar este proyecto a otra idea (ej. Sistema de Inventario)?
-1. **Reemplaza la capa de datos:** Modifica `app/data/levels_data.py` por `app/data/inventory_data.py` (ej. Categorías, Productos, Stock).
-2. **Actualiza las vistas:** En `app/templates/index.html` ajusta los títulos a "Sistema de Control de Stock".
-3. **Mantén intacta toda la técnica:** El entorno `.venv`, las librerías, el enrutador de Flask y los estilos CSS funcionarán de inmediato sin reescribir la base del software.
+---
+
+## 🤖 6. Evidencia de Uso de Google Antigravity
+
+El proyecto fue concebido, estructurado y programado utilizando el entorno agéntico de **Google Antigravity IDE**, aprovechando:
+* **Planificación Agéntica Formal (*Plan-First Approach*):** Desacoplamiento estricto de la capa de dominio vs infraestructura.
+* **Sistema de Skills Personalizadas (`.agents/skills/`):** Creación e integración de la skill `flask-docs-architect` para normativas de arquitectura en Flask.
+* **Automatización de Tareas en Segundo Plano:** Creación de entornos `.venv`, gestión de dependencias y despliegue por API REST en Render.
+* **Protocolos MCP Integrados:** Configuración de herramientas y colaboración en `.mcp.json`.
 
 ---
 
-## 📚 Documentación Adicional
+## 📚 Enlaces a Documentación Completa
 
 * 📖 [Tutorial Paso a Paso para Principiantes](docs/tutorial.md)
-* 🏗️ [Documentación de Arquitectura y Pipeline Archify](docs/arquitectura.md)
+* 🎬 [Guión Oficial para el Video de Sustentación](docs/presentacion_sustentacion.md)
+* 🤖 [Evidencia de Google Antigravity IDE](docs/evidencia_antigravity.md)
+* 🏗️ [Documentación de Arquitectura](docs/arquitectura.md)
+* 📓 [Cuaderno Jupyter con Modelos Matemáticos](InvestigaLab_Metodologia_Cientifica.ipynb)
+* 📄 [Documento Word Oficial (.docx)](Documento_Entrega_y_Sustentacion_InvestigaLab.docx)
 * 📊 [Diagrama Visual de Arquitectura](docs/images/arquitectura.png)
+* 📁 [Manuales Técnicos de Buenas Prácticas con Flask](docs/documentacion/)

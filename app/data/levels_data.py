@@ -80,6 +80,29 @@ LEVELS_DATA = [
                 "practical_activity": "Convierte una inquietud general en una pregunta formal de investigación aplicando los 5 elementos de la fórmula estructural."
             }
         ],
+        "course_materials": [
+            {
+                "title": "Ficha de Trabajo: Plantilla del Árbol de Problemas & Preguntas Delimitadas",
+                "type": "Plantilla Editable",
+                "icon": "fa-file-lines",
+                "description": "Formato estructurado para mapear causas raíces, problema central delimitado y efectos observables según los criterios de Kerlinger y Arias.",
+                "action": "Descargar Ficha en Markdown / PDF"
+            },
+            {
+                "title": "Checklist de Validación de Popper & Bunge",
+                "type": "Lista de Verificación",
+                "icon": "fa-square-check",
+                "description": "Rúbrica de 10 puntos para verificar si tu propuesta cumple el criterio de falsabilidad, pertinencia fáctica y delimitación espacio-temporal.",
+                "action": "Consultar Criterios de Demarcación"
+            },
+            {
+                "title": "Guía de Epistemología: Las 15 Propiedades de la Ciencia",
+                "type": "Guía de Lectura Rápida",
+                "icon": "fa-book-open-reader",
+                "description": "Resumen analítico del Capítulo 1 de Mario Bunge con cuadros comparativos entre ciencias formales y fácticas.",
+                "action": "Abrir Resumen de Lectura"
+            }
+        ],
         "example_case": {
             "title": "Caso de Estudio Nivel 1: El Rendimiento Académico y el Sueño",
             "context": "Un docente observa que en el turno de la mañana los estudiantes universitarios muestran signos de fatiga y rinden menos.",
@@ -180,6 +203,29 @@ LEVELS_DATA = [
                 "practical_activity": "Redacta el Objetivo General de tu proyecto, 3 Objetivos Específicos jerarquizados y formula la pareja de Hipótesis $H_0$ y $H_1$."
             }
         ],
+        "course_materials": [
+            {
+                "title": "Matriz de Antecedentes & Ecuaciones Booleanas (Plantilla)",
+                "type": "Plantilla de Búsqueda",
+                "icon": "fa-table-list",
+                "description": "Formato para registrar 10 antecedentes con operadores booleanos (AND, OR, NOT), filtros temporales y taxonomía de hallazgos.",
+                "action": "Descargar Matriz de Antecedentes"
+            },
+            {
+                "title": "Tabla Guía de Verbos Taxonómicos de Bloom para Objetivos",
+                "type": "Guía de Redacción",
+                "icon": "fa-spell-check",
+                "description": "Desglose de verbos infinitivos clasificados según nivel de profundidad: Descriptivo, Analítico, Correlacional y Explicativo.",
+                "action": "Consultar Tabla de Verbos"
+            },
+            {
+                "title": "Fórmula y Sintaxis de Hipótesis Científicas (H0 vs H1)",
+                "type": "Ficha Técnica",
+                "icon": "fa-code-branch",
+                "description": "Guía para plantear hipótesis estadísticas uniterales y bilaterales para diseños comparativos y correlacionales.",
+                "action": "Abrir Ficha de Hipótesis"
+            }
+        ],
         "example_case": {
             "title": "Caso de Estudio Nivel 2: Gamificación en el Aprendizaje de Algoritmos",
             "context": "Se desea evaluar si una plataforma gamificada mejora la resolución de algoritmos frente a la enseñanza tradicional.",
@@ -278,6 +324,29 @@ LEVELS_DATA = [
                     "Estructura estándar de la tabla: Variable | Definición Conceptual | Definición Operacional | Dimensiones | Indicadores | Escala | Ítems del Instrumento"
                 ],
                 "practical_activity": "Diseña una matriz de operacionalización completa para un constructo complejo como 'Competencia Digital Docente' o 'Calidad del Software Educativo' con al menos 2 dimensiones y 4 indicadores."
+            }
+        ],
+        "course_materials": [
+            {
+                "title": "Calculadora & Formulario de Tamaño Muestral (Poblaciones Finitas e Infinitas)",
+                "type": "Ficha Matemática / Calculadora",
+                "icon": "fa-calculator",
+                "description": "Fórmulas de muestreo probabilístico paso a paso con valores críticos Z (90%, 95%, 99%) y márgenes de error e.",
+                "action": "Descargar Ficha de Muestreo"
+            },
+            {
+                "title": "Plantilla de Matriz de Operacionalización de Variables",
+                "type": "Plantilla Estructurada",
+                "icon": "fa-table-cells",
+                "description": "Cuadro estandarizado para definir variables, dimensiones, indicadores, niveles y escalas de medición (Nominal, Ordinal, Intervalo, Razón).",
+                "action": "Descargar Matriz de Operacionalización"
+            },
+            {
+                "title": "Guía del Principio MAXMINCON de Fred Kerlinger",
+                "type": "Guía de Diseño Experimental",
+                "icon": "fa-flask-vial",
+                "description": "Estrategias para maximizar varianza sistemática, minimizar varianza de error y controlar variables extrañas.",
+                "action": "Consultar Guía Experimental"
             }
         ],
         "example_case": {
@@ -382,6 +451,29 @@ LEVELS_DATA = [
                 "practical_activity": "Calcula el tamaño del efecto $d$ de Cohen dados dos grupos: Grupo Experimental ($\bar{X}_1 = 17.5, s_1 = 1.8$) y Grupo Control ($\bar{X}_2 = 13.2, s_2 = 2.1$). Interpreta la magnitud pedagógica del resultado."
             }
         ],
+        "course_materials": [
+            {
+                "title": "Árbol de Decisión Estadística Paramétrica vs No Paramétrica",
+                "type": "Diagrama de Flujo / Ficha Guía",
+                "icon": "fa-diagram-project",
+                "description": "Esquema interactivo para seleccionar la prueba adecuada (t-Student, ANOVA, Mann-Whitney, Wilcoxon, Chi-Cuadrado) según supuestos de normalidad.",
+                "action": "Consultar Árbol de Decisión"
+            },
+            {
+                "title": "Formulario Psicométrico: V de Aiken y Alfa de Cronbach",
+                "type": "Plantilla de Juicio de Expertos",
+                "icon": "fa-chart-simple",
+                "description": "Fichas de validación de contenido para jueces expertos y sintaxis de consistencia interna con escalas Likert.",
+                "action": "Descargar Ficha Psicométrica"
+            },
+            {
+                "title": "Tabla de Interpretación del Tamaño del Efecto (d de Cohen & Eta Cuadrado)",
+                "type": "Guía de Análisis Cuantitativo",
+                "icon": "fa-chart-pie",
+                "description": "Criterios internacionales de la APA y ASA para reportar la magnitud sustantiva de los hallazgos experimentales.",
+                "action": "Abrir Guía de Tamaño del Efecto"
+            }
+        ],
         "example_case": {
             "title": "Caso de Estudio Nivel 4: Contraste de Hipótesis y Tamaño del Efecto en Educación STEM",
             "context": "Evaluación de un método de robótica educativa en el pensamiento computacional ($n = 60$).",
@@ -480,6 +572,29 @@ LEVELS_DATA = [
                     "Estructura de la Carta de Respuesta a Revisores: [Agradecimiento general] + [Resumen de cambios mayores] + [Tabla Punto por Punto: Comentario del Revisor -> Respuesta del Autor -> Modificación exacta con página y línea]"
                 ],
                 "practical_activity": "Simula la recepción de una crítica severa del 'Revisor 2' sobre la representatividad de tu muestra y redacta la respuesta profesional correspondiente para la carta de réplica al editor."
+            }
+        ],
+        "course_materials": [
+            {
+                "title": "Estructura IMRyD y Plantilla de Artículo Científico (Manuscript Template)",
+                "type": "Plantilla de Publicación",
+                "icon": "fa-newspaper",
+                "description": "Plantilla estándar en formato Word/LaTeX para estructurar Título, Abstract (250 palabras), IMRyD, Tablas APA 7ma ed. y disponibilidad de datos.",
+                "action": "Descargar Plantilla IMRyD"
+            },
+            {
+                "title": "Protocolo de Consentimiento Informado & Declaración COPE sobre IA",
+                "type": "Formato Ético Institucional",
+                "icon": "fa-shield-halved",
+                "description": "Modelos para comités de bioética IRB, cláusulas de anonimato, no maleficencia y declaración explícita de herramientas de IA generativa.",
+                "action": "Descargar Protocolo Bioético"
+            },
+            {
+                "title": "Plantilla de Carta de Réplica Punto por Punto a Revisores (Rebuttal Letter)",
+                "type": "Plantilla de Peer Review",
+                "icon": "fa-envelope-open-text",
+                "description": "Tabla formal para responder a dictámenes de revisión mayor/menor en revistas Scopus/JCR Q1-Q4 con cortesía y rigor.",
+                "action": "Descargar Plantilla de Rebuttal"
             }
         ],
         "example_case": {

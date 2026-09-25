@@ -57,10 +57,9 @@
                 <ul class="nav-links">
                     <li><a href="#inicio" class="nav-link"><i class="fa-solid fa-house"></i> Inicio</a></li>
                     <li><a href="#problema" class="nav-link"><i class="fa-solid fa-bullseye"></i> Propósito</a></li>
-                    <li><a href="#niveles" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> 5 Niveles</a></li>
+                    <li><a href="#niveles" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> 5 Niveles del Curso</a></li>
                     <li><a href="#biblioteca" class="nav-link"><i class="fa-solid fa-book-bookmark"></i> Libros & Autores</a></li>
-                    <li><a href="#matriz" class="nav-link"><i class="fa-solid fa-table-cells"></i> Matriz Viva</a></li>
-                    <li><a href="#arquitectura" class="nav-link pipeline-tab"><i class="fa-solid fa-diagram-project"></i> Pipeline Archify</a></li>
+                    <li><a href="#matriz" class="nav-link"><i class="fa-solid fa-table-cells"></i> Matriz Científica</a></li>
                     <li><a href="#ejecutar" class="nav-link"><i class="fa-solid fa-terminal"></i> Ejecución</a></li>
                 </ul>
             </nav>
@@ -162,12 +161,12 @@
                         </div>
                         <h3 class="level-card-title">Ruta Pedagógica Guiada & Herramientas Vivas</h3>
                         <p class="level-card-subtitle">
-                            InvestigaLab ofrece una escalera de 5 niveles con fundamentos de autores clásicos, fórmulas matemáticas, generador de matrices de congruencia en tiempo real y arquitectura de software al estilo Archify.
+                            InvestigaLab ofrece una escalera de 5 niveles con fundamentos de autores clásicos, fórmulas matemáticas aplicadas, generador de matrices de congruencia en tiempo real y materiales interactivos descargables.
                         </p>
                         <ul style="list-style: none; font-size: 0.88rem; color: var(--text-muted); display: flex; flex-direction: column; gap: 8px;">
                             <li><i class="fa-solid fa-check" style="color: #10b981;"></i> 5 niveles progresivos con cuestionarios de autoevaluación.</li>
                             <li><i class="fa-solid fa-check" style="color: #10b981;"></i> Generador de Matriz de Consistencia Metodológica en vivo.</li>
-                            <li><i class="fa-solid fa-check" style="color: #10b981;"></i> Pipeline de software desacoplado y documentado con Archify.</li>
+                            <li><i class="fa-solid fa-check" style="color: #10b981;"></i> Biblioteca canónica con obras de Bunge, Popper, Sampieri y Kerlinger.</li>
                         </ul>
                     </div>
                 </div>
@@ -185,7 +184,8 @@
                     </p>
                 </div>
 
-                <div class="levels-grid">
+                <!-- Tarjetas de Resumen de los 5 Niveles -->
+                <div class="levels-grid" style="margin-bottom: 40px;">
                     <!-- Nivel 1 -->
                     <div class="level-card" style="--level-color: #3b82f6;">
                         <div class="level-card-header">
@@ -193,11 +193,14 @@
                             <div class="level-icon-wrap"><i class="fa-solid fa-seedling"></i></div>
                         </div>
                         <h3 class="level-card-title">Fundamentos Epistemológicos & Problema</h3>
-                        <p class="level-card-subtitle">Falsacionismo de Karl Popper, las 15 características de la ciencia de Mario Bunge y formulación de preguntas no dicotómicas.</p>
+                        <p class="level-card-subtitle">Falsacionismo de Karl Popper, las 15 características de la ciencia de Mario Bunge y delimitación del problema con Sampieri.</p>
                         <div class="level-meta">
                             <span><i class="fa-regular fa-clock"></i> 12 Horas</span>
                             <span><i class="fa-solid fa-book"></i> Bunge & Popper</span>
                         </div>
+                        <button class="btn btn-secondary open-level-btn" data-target-level="principiante" style="width: 100%; justify-content: center; margin-top: 10px;">
+                            Explorar Nivel 1 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
 
                     <!-- Nivel 2 -->
@@ -207,11 +210,14 @@
                             <div class="level-icon-wrap"><i class="fa-solid fa-book-open"></i></div>
                         </div>
                         <h3 class="level-card-title">Marco Teórico, Objetivos e Hipótesis</h3>
-                        <p class="level-card-subtitle">Ecuaciones booleanas en Scopus/PubMed, estado del arte en embudo, objetivos SMART e hipótesis $H_0 / H_1$ según Sampieri.</p>
+                        <p class="level-card-subtitle">Ecuaciones booleanas en Scopus/PubMed, estado del arte en embudo, objetivos SMART e hipótesis $H_0 / H_1$.</p>
                         <div class="level-meta">
                             <span><i class="fa-regular fa-clock"></i> 16 Horas</span>
                             <span><i class="fa-solid fa-book"></i> Sampieri & Arias</span>
                         </div>
+                        <button class="btn btn-secondary open-level-btn" data-target-level="basico" style="width: 100%; justify-content: center; margin-top: 10px;">
+                            Explorar Nivel 2 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
 
                     <!-- Nivel 3 -->
@@ -221,11 +227,14 @@
                             <div class="level-icon-wrap"><i class="fa-solid fa-layer-group"></i></div>
                         </div>
                         <h3 class="level-card-title">Diseño, Muestreo y Operacionalización</h3>
-                        <p class="level-card-subtitle">Principio MAXMINCON de Kerlinger, fórmulas matemáticas de muestreo ($Z, e, p$) y matrices de variables (escalas nominal, ordinal, intervalo, razón).</p>
+                        <p class="level-card-subtitle">Principio MAXMINCON de Kerlinger, fórmulas matemáticas de muestreo ($Z, e, p$) y matrices de variables y escalas.</p>
                         <div class="level-meta">
                             <span><i class="fa-regular fa-clock"></i> 22 Horas</span>
                             <span><i class="fa-solid fa-book"></i> Kerlinger & Creswell</span>
                         </div>
+                        <button class="btn btn-secondary open-level-btn" data-target-level="intermedio" style="width: 100%; justify-content: center; margin-top: 10px;">
+                            Explorar Nivel 3 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
 
                     <!-- Nivel 4 -->
@@ -235,11 +244,14 @@
                             <div class="level-icon-wrap"><i class="fa-solid fa-chart-pie"></i></div>
                         </div>
                         <h3 class="level-card-title">Psicometría y Estadística Inferencial</h3>
-                        <p class="level-card-subtitle">Alfa de Cronbach ($\alpha$), V de Aiken ($V$), pruebas de normalidad (Shapiro-Wilk) y contraste de hipótesis (t-Student, ANOVA, $d$ de Cohen).</p>
+                        <p class="level-card-subtitle">Alfa de Cronbach ($\alpha$), V de Aiken ($V$), normalidad (Shapiro-Wilk) y contraste de hipótesis (t-Student, ANOVA, $d$ de Cohen).</p>
                         <div class="level-meta">
                             <span><i class="fa-regular fa-clock"></i> 28 Horas</span>
                             <span><i class="fa-solid fa-book"></i> Kerlinger & Sampieri</span>
                         </div>
+                        <button class="btn btn-secondary open-level-btn" data-target-level="avanzado" style="width: 100%; justify-content: center; margin-top: 10px;">
+                            Explorar Nivel 4 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
 
                     <!-- Nivel 5 -->
@@ -249,12 +261,952 @@
                             <div class="level-icon-wrap"><i class="fa-solid fa-award"></i></div>
                         </div>
                         <h3 class="level-card-title">Publicación IMRyD, Bioética y Peer Review</h3>
-                        <p class="level-card-subtitle">Estructura IMRyD, comités de bioética (Belmont/Helsinki), directrices éticas de IA (COPE), cuartiles Q1-Q4 y cartas de réplica (*Rebuttal*).</p>
+                        <p class="level-card-subtitle">Estructura IMRyD, comités de bioética (Belmont/Helsinki), ética de IA (COPE), cuartiles Q1-Q4 y cartas de réplica (*Rebuttal*).</p>
                         <div class="level-meta">
                             <span><i class="fa-regular fa-clock"></i> 35 Horas</span>
                             <span><i class="fa-solid fa-book"></i> Creswell & Kuhn</span>
                         </div>
+                        <button class="btn btn-secondary open-level-btn" data-target-level="experto" style="width: 100%; justify-content: center; margin-top: 10px;">
+                            Explorar Nivel 5 <i class="fa-solid fa-arrow-right"></i>
+                        </button>
                     </div>
+                </div>
+
+                <!-- Explorador Interactivo Detallado de los 5 Niveles -->
+                <div id="explorador-niveles" style="background: rgba(17, 24, 39, 0.85); border: 1px solid var(--border-color); border-radius: var(--radius-lg); padding: 32px 28px; box-shadow: var(--shadow-md);">
+                    
+                    <div style="text-align: center; margin-bottom: 28px;">
+                        <span class="gh-badge"><i class="fa-solid fa-graduation-cap"></i> Explorador Curricular Interactivo</span>
+                        <h3 style="font-family: var(--font-heading); font-size: 1.8rem; color: #fff; margin-top: 10px;">
+                            Contenido Completo de Cada Nivel
+                        </h3>
+                        <p style="font-size: 0.92rem; color: var(--text-muted); max-width: 650px; margin: 0 auto;">
+                            Haz clic en las pestañas para acceder inmediatamente a las lecciones teóricas, citas de autores clásicos, talleres prácticos, casos reales y autoevaluaciones.
+                        </p>
+                    </div>
+
+                    <!-- Selector de Pestañas de Niveles -->
+                    <div style="display: flex; gap: 10px; overflow-x: auto; padding-bottom: 14px; margin-bottom: 30px; justify-content: center; flex-wrap: wrap;">
+                        <button class="btn btn-primary level-tab-btn active" data-target-level="principiante" style="border-radius: var(--radius-full); font-size: 0.88rem; padding: 8px 18px;">
+                            <i class="fa-solid fa-seedling"></i> Nivel 1: Principiante
+                        </button>
+                        <button class="btn btn-secondary level-tab-btn" data-target-level="basico" style="border-radius: var(--radius-full); font-size: 0.88rem; padding: 8px 18px;">
+                            <i class="fa-solid fa-book-open"></i> Nivel 2: Básico
+                        </button>
+                        <button class="btn btn-secondary level-tab-btn" data-target-level="intermedio" style="border-radius: var(--radius-full); font-size: 0.88rem; padding: 8px 18px;">
+                            <i class="fa-solid fa-layer-group"></i> Nivel 3: Intermedio
+                        </button>
+                        <button class="btn btn-secondary level-tab-btn" data-target-level="avanzado" style="border-radius: var(--radius-full); font-size: 0.88rem; padding: 8px 18px;">
+                            <i class="fa-solid fa-chart-pie"></i> Nivel 4: Avanzado
+                        </button>
+                        <button class="btn btn-secondary level-tab-btn" data-target-level="experto" style="border-radius: var(--radius-full); font-size: 0.88rem; padding: 8px 18px;">
+                            <i class="fa-solid fa-award"></i> Nivel 5: Experto
+                        </button>
+                    </div>
+
+                    <!-- ================= PANEL 1: PRINCIPIANTE ================= -->
+                    <div id="panel-principiante" class="level-panel" style="display: block;">
+                        <div class="level-card" style="--level-color: #3b82f6; border-color: #3b82f6; background: rgba(15, 23, 42, 0.85); margin-bottom: 28px;">
+                            <div class="level-card-header">
+                                <div>
+                                    <span class="level-badge" style="color: #3b82f6; background: rgba(59, 130, 246, 0.15);">Nivel 1 • Principiante</span>
+                                    <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-top: 6px;">
+                                        Fundamentos Epistemológicos y Planteamiento del Problema
+                                    </h3>
+                                </div>
+                                <div class="level-icon-wrap" style="color: #3b82f6; font-size: 1.6rem;"><i class="fa-solid fa-seedling"></i></div>
+                            </div>
+                            <p style="color: var(--text-main); font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+                                En este primer escalón aprenderás a distinguir el conocimiento empírico vulgar del conocimiento científico metódico y sistemático. Dominarás el criterio de falsabilidad de Popper, las 15 características de la ciencia según Mario Bunge y el método de delimitación de problemas de investigación de Hernández-Sampieri.
+                            </p>
+                            <div class="level-meta">
+                                <span><i class="fa-regular fa-clock" style="color: #3b82f6;"></i> <strong>Carga estimada:</strong> 12 Horas</span>
+                                <span><i class="fa-solid fa-list-check" style="color: #3b82f6;"></i> <strong>Contenido:</strong> 3 Módulos Teórico-Prácticos</span>
+                            </div>
+                        </div>
+
+                        <!-- Citas Epistemológicas -->
+                        <div style="margin-bottom: 28px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-book-bookmark" style="color: #38bdf8;"></i> Fundamentación en Libros Canónicos</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #3b82f6; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">Mario Bunge (1960)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">La ciencia: su método y su filosofía</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«El conocimiento científico es fáctico, trasciende los hechos, es analítico, claro, preciso, comunicable, verificable, metódico y sistemático.»</blockquote>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #3b82f6; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">Karl R. Popper (1934)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">La lógica de la investigación científica</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«Ha de ser posible refutar por la experiencia un sistema científico empírico. El criterio de demarcación es la falsabilidad.»</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulos Detallados -->
+                        <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 18px;"><i class="fa-solid fa-layer-group" style="color: #3b82f6;"></i> Módulos Formativos</h4>
+                        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+                            <div class="level-card" style="--level-color: #3b82f6; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">1.1 Epistemología, Tipos de Conocimiento y Falsacionismo</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Comprende la evolución del pensamiento humano desde el sentido común hasta el método científico moderno.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #3b82f6; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #60a5fa; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    Mario Bunge clasifica las ciencias en Formales (lógica y matemáticas, coherencia deductiva) y Fácticas (física, biología, ciencias sociales, contrastación empírica). Karl Popper demostró que la inducción ('todos los cisnes son blancos') es insuficiente; la ciencia avanza buscando refutar conjeturas audaces.
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Selecciona 3 afirmaciones de tu entorno y somételas a la 'Prueba de Popper': ¿Qué dato empírico observable demostraría que la afirmación es falsa?</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #3b82f6; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">1.2 Identificación de Vacíos de Conocimiento y Árbol de Problemas</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Cómo pasar de la observación empírica a la detección de una brecha en la literatura científica.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #3b82f6; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #60a5fa; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    Un problema científico es un vacío de conocimiento (Arias, 2012; Sampieri, 2018). La técnica del Árbol de Problemas mapea: Raíces (Causas profundas), Tronco (Problema central o fenómeno) y Ramas (Efectos o consecuencias observadas).
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Dibuja un árbol de problemas definiendo 3 causas raíz, 1 problema central delimitado y 3 consecuencias observables.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #3b82f6; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">1.3 Formulación de la Pregunta de Investigación y Delimitación</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Aprende a redactar preguntas científicas rigurosas evitando errores dicotómicos.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #3b82f6; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #60a5fa; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    Fórmula estructural: [Pregunta guía] + [Variables] + [Unidad de análisis / Población] + [Contexto / Espacio] + [Tiempo]. Evitar preguntas de 'Sí/No' (dicotómicas) y juicios de valor morales.
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Convierte una inquietud general en una pregunta formal de investigación aplicando los 5 elementos de la fórmula estructural.</p>
+                                </div>
+                            </div>
+                        <!-- Materiales, Recursos & Plantillas del Nivel 1 -->
+                        <div style="margin-bottom: 30px;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                                <h4 style="color: #fff; font-size: 1.25rem;">
+                                    <i class="fa-solid fa-folder-open" style="color: #f59e0b;"></i> Materiales & Recursos del Curso (Nivel 1)
+                                </h4>
+                                <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600;">
+                                    3 Recursos Disponibles
+                                </span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #3b82f6; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #a5b4fc; font-weight: 700; background: rgba(99, 102, 241, 0.15); padding: 3px 8px; border-radius: 4px;">Plantilla Editable</span>
+                                            <i class="fa-solid fa-file-lines" style="color: #3b82f6; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Ficha de Trabajo: Árbol de Problemas & Pregunta Delimitada</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Formato estructurado para mapear causas raíces, problema central delimitado y efectos observables según Kerlinger y Arias.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# PLANTILLA DE ÁRBOL DE PROBLEMAS CIENTÍFICO&#10;&#10;1. Causas Raíces (Por qué ocurre):&#10; - Causa 1: ...&#10; - Causa 2: ...&#10; - Causa 3: ...&#10;&#10;2. Problema Central Delimitado:&#10; ¿Cuál es la relación entre [Variable 1] y [Variable 2] en [Población] en [Contexto] durante [Periodo]?&#10;&#10;3. Efectos o Consecuencias Observables:&#10; - Efecto 1: ...&#10; - Efecto 2: ..." style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Plantilla Markdown
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #3b82f6; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #a5b4fc; font-weight: 700; background: rgba(99, 102, 241, 0.15); padding: 3px 8px; border-radius: 4px;">Checklist</span>
+                                            <i class="fa-solid fa-square-check" style="color: #3b82f6; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Checklist de Validación de Popper & Bunge</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Rúbrica de 10 puntos para verificar si tu propuesta cumple el criterio de falsabilidad, pertinencia fáctica y delimitación.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# CHECKLIST DE VALIDACIÓN EPISTEMOLÓGICA (POPPER & BUNGE)&#10;[ ] 1. ¿El problema expresa una relación entre 2 o más variables observables?&#10;[ ] 2. ¿Evita juicios de valor morales o de opinión subjetiva?&#10;[ ] 3. ¿Es susceptible de someterse a prueba empírica (falsabilidad)?&#10;[ ] 4. ¿Está delimitado espacial, temporal y poblacionalmente?&#10;[ ] 5. ¿Existe viabilidad ética y acceso al campo de recolección?" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Checklist
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #3b82f6; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #a5b4fc; font-weight: 700; background: rgba(99, 102, 241, 0.15); padding: 3px 8px; border-radius: 4px;">Guía de Lectura</span>
+                                            <i class="fa-solid fa-book-open-reader" style="color: #3b82f6; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Las 15 Propiedades del Método Científico (Mario Bunge)</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Resumen analítico con cuadro comparativo entre ciencias formales (deductivas) y fácticas (empíricas).</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# 15 PROPIEDADES DE LA CIENCIA SEGÚN MARIO BUNGE&#10;1. Fáctica (parte de los hechos)&#10;2. Trasciende los hechos&#10;3. Analítica&#10;4. Especializada&#10;5. Clara y precisa&#10;6. Comunicable&#10;7. Verificable empíricamente&#10;8. Metódica&#10;9. Sistemática&#10;10. General&#10;11. Legal (busca leyes)&#10;12. Explicativa&#10;13. Predictiva&#10;14. Abierta&#10;15. Útil" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Resumen Bunge
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso Real -->
+                        <div class="level-card" style="--level-color: #38bdf8; background: rgba(15, 23, 42, 0.8); margin-bottom: 28px;">
+                            <strong style="color: #38bdf8; font-size: 0.85rem; text-transform: uppercase;"><i class="fa-solid fa-magnifying-glass-chart"></i> Caso de Estudio Nivel 1:</strong>
+                            <h5 style="color: #fff; font-size: 1.15rem; margin: 6px 0 10px 0;">El Rendimiento Académico y el Sueño</h5>
+                            <p style="color: var(--text-muted); font-size: 0.9rem; margin-bottom: 10px;"><strong>Observación inicial:</strong> En el turno de la mañana los estudiantes universitarios rinden menos.</p>
+                            <div style="background: rgba(0,0,0,0.4); padding: 14px; border-left: 3px solid #38bdf8; border-radius: 6px; font-size: 0.9rem; color: #bae6fd;">
+                                <strong>Pregunta Delimitada Rigurosa:</strong><br>
+                                «¿Cuál es la relación entre la calidad y duración del sueño (horas nocturnas) y el rendimiento en evaluaciones de álgebra lineal en estudiantes de ingeniería de primer semestre de la Universidad X durante el periodo 2026-I?»
+                            </div>
+                        </div>
+
+                        <!-- Quiz de Autoevaluación Nivel 1 -->
+                        <div class="level-card" style="--level-color: #10b981; background: rgba(17, 24, 39, 0.9); margin-bottom: 24px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-clipboard-check" style="color: #10b981;"></i> Autoevaluación Nivel 1</h4>
+                            <div class="quiz-item" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px;">
+                                <p style="color: #fff; font-size: 0.95rem; margin-bottom: 12px;"><strong>1.</strong> ¿Cuál es el criterio de demarcación científica propuesto por Karl Popper?</p>
+                                <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px;">
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_principiante_0" value="0">
+                                        <span>Una teoría es científica si puede demostrarse como una verdad absoluta e inmutable.</span>
+                                    </label>
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_principiante_0" value="1">
+                                        <span>Una teoría es científica si formula hipótesis susceptibles de ser refutadas empíricamente (falsabilidad).</span>
+                                    </label>
+                                </div>
+                                <button class="btn btn-secondary check-quiz-btn" data-level="principiante" data-qidx="0" data-correct="1" data-explanation="Karl Popper demostró que la ciencia avanza por refutación empírica (falsacionismo), no por verificación acumulativa indiscutible." style="padding: 6px 14px; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-check"></i> Verificar Respuesta
+                                </button>
+                                <div id="feedback_principiante_0" style="display: none; margin-top: 10px; padding: 10px 14px; border-radius: 6px; font-size: 0.88rem;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Botón Siguiente Nivel -->
+                        <div style="text-align: right;">
+                            <button class="btn btn-primary open-level-btn" data-target-level="basico" style="border-radius: var(--radius-full);">
+                                Pasar al Nivel 2: Básico <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ================= PANEL 2: BÁSICO ================= -->
+                    <div id="panel-basico" class="level-panel" style="display: none;">
+                        <div class="level-card" style="--level-color: #10b981; border-color: #10b981; background: rgba(15, 23, 42, 0.85); margin-bottom: 28px;">
+                            <div class="level-card-header">
+                                <div>
+                                    <span class="level-badge" style="color: #10b981; background: rgba(16, 185, 129, 0.15);">Nivel 2 • Básico</span>
+                                    <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-top: 6px;">
+                                        Marco Teórico, Estado del Arte e Hipótesis Científicas
+                                    </h3>
+                                </div>
+                                <div class="level-icon-wrap" style="color: #10b981; font-size: 1.6rem;"><i class="fa-solid fa-book-open"></i></div>
+                            </div>
+                            <p style="color: var(--text-main); font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+                                Construye un marco teórico en embudo, elabora estados del arte rigurosos con operadores booleanos en bases de datos científicas (Scopus, PubMed, SciELO), define objetivos con la Taxonomía de Bloom y formula hipótesis nulas ($H_0$) y alternativas ($H_1$).
+                            </p>
+                            <div class="level-meta">
+                                <span><i class="fa-regular fa-clock" style="color: #10b981;"></i> <strong>Carga estimada:</strong> 16 Horas</span>
+                                <span><i class="fa-solid fa-list-check" style="color: #10b981;"></i> <strong>Contenido:</strong> 3 Módulos Teórico-Prácticos</span>
+                            </div>
+                        </div>
+
+                        <!-- Citas Epistemológicas -->
+                        <div style="margin-bottom: 28px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-book-bookmark" style="color: #10b981;"></i> Fundamentación en Libros Canónicos</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #10b981; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">Hernández-Sampieri & Mendoza (2018)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">Metodología de la Investigación</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«El marco teórico no es un resumen de textos, sino una integración analítica de teorías, antecedentes e investigaciones previas.»</blockquote>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #10b981; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">John W. Creswell (2018)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">Research Design</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«A rigorous theoretical framework establishes the rationale for the study, pointing out explicitly what deficiencies remain in the literature.»</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulos Detallados -->
+                        <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 18px;"><i class="fa-solid fa-layer-group" style="color: #10b981;"></i> Módulos Formativos</h4>
+                        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+                            <div class="level-card" style="--level-color: #10b981; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">2.1 Búsqueda Bibliográfica y Estado del Arte</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Dominio de operadores booleanos (AND, OR, NOT) y descriptores MeSH/DeCS.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #10b981; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #6ee7b7; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    El Estado del Arte sintetiza el conocimiento existente sobre el problema en los últimos 3 a 5 años en revistas con revisión por pares (*peer-reviewed*). Diseño de ecuaciones de búsqueda: `("gamification" OR "game-based learning") AND ("programming") AND ("higher education")`.
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Construye una ecuación de búsqueda en Google Académico o Scopus utilizando 2 operadores booleanos y descarga 5 artículos primarios.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #10b981; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">2.2 Marco Teórico en Embudo y Matriz de Antecedentes</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Estructura la teoría de soporte desde los postulados macro hasta el problema específico.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #10b981; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #6ee7b7; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    Método del Mapeo Conceptual e Índices: 1) Teoría general que explica el fenómeno; 2) Antecedentes internacionales; 3) Antecedentes nacionales y locales; 4) Definición de términos operacionales.
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Completa una matriz de antecedentes comparando 3 investigaciones científicas publicadas en los últimos 5 años.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #10b981; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">2.3 Objetivos SMART e Hipótesis ($H_0$ y $H_1$)</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Redacta objetivos taxonómicos y formula hipótesis nulas y alternativas contrastables.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #10b981; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #6ee7b7; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    Objetivos SMART con verbos de Bloom (Describir -> Analizar -> Comparar -> Determinar). Hipótesis Alternativa ($H_1$) postula la relación o efecto esperado; Hipótesis Nula ($H_0$) postula ausencia de efecto ($H_0: \mu_1 = \mu_2$).
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Redacta el Objetivo General de tu proyecto, 3 Objetivos Específicos y la pareja de Hipótesis $H_0$ y $H_1$.</p>
+                                </div>
+                            </div>
+                        <!-- Materiales, Recursos & Plantillas del Nivel 2 -->
+                        <div style="margin-bottom: 30px;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                                <h4 style="color: #fff; font-size: 1.25rem;">
+                                    <i class="fa-solid fa-folder-open" style="color: #f59e0b;"></i> Materiales & Recursos del Curso (Nivel 2)
+                                </h4>
+                                <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600;">
+                                    3 Recursos Disponibles
+                                </span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #10b981; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #a5b4fc; font-weight: 700; background: rgba(99, 102, 241, 0.15); padding: 3px 8px; border-radius: 4px;">Plantilla de Búsqueda</span>
+                                            <i class="fa-solid fa-table-list" style="color: #10b981; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Matriz de Antecedentes & Ecuaciones Booleanas</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Formato para registrar 10 antecedentes con operadores booleanos (AND, OR, NOT), filtros temporales y hallazgos.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="| N° | Autor & Año | Título del Artículo | Base Indexada (Scopus/SciELO) | Muestra (n) | Metodología | Hallazgo Clave |&#10;| :--- | :--- | :--- | :--- | :--- | :--- | :--- |&#10;| 1 | | | | | | |&#10;| 2 | | | | | | |&#10;| 3 | | | | | | |" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Matriz de Antecedentes
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #10b981; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #a5b4fc; font-weight: 700; background: rgba(99, 102, 241, 0.15); padding: 3px 8px; border-radius: 4px;">Guía de Redacción</span>
+                                            <i class="fa-solid fa-spell-check" style="color: #10b981; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Tabla de Verbos Taxonómicos de Bloom para Objetivos</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Desglose de verbos infinitivos clasificados según nivel de profundidad: Descriptivo, Analítico, Correlacional y Explicativo.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# VERBOS PARA OBJETIVOS CIENTÍFICOS SEGÚN NIVEL&#10;- Descriptivo: Identificar, Caracterizar, Describir, Diagnosticar, Enumerar.&#10;- Analítico / Comparativo: Analizar, Comparar, Contrastar, Cotejar.&#10;- Correlacional: Establecer relación, Correlacionar, Asociar.&#10;- Explicativo / Causal: Determinar el impacto, Evaluar el efecto, Demostrar, Comprobar." style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Tabla de Verbos
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #10b981; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #a5b4fc; font-weight: 700; background: rgba(99, 102, 241, 0.15); padding: 3px 8px; border-radius: 4px;">Ficha Técnica</span>
+                                            <i class="fa-solid fa-code-branch" style="color: #10b981; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Fórmula y Sintaxis de Hipótesis Científicas (H0 vs H1)</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Estructura matemática para plantear hipótesis estadísticas bilaterales y unilaterales.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# SINTAXIS DE FORMULACIÓN DE HIPÓTESIS&#10;1. Hipótesis Nula (H0):&#10; H0: μ_exp = μ_ctrl (No existen diferencias significativas)&#10; H0: ρ = 0 (No existe correlación entre las variables)&#10;&#10;2. Hipótesis Alternativa (H1):&#10; H1: μ_exp > μ_ctrl (El grupo experimental es significativamente superior)&#10; H1: ρ != 0 (Existe relación estadísticamente significativa)" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Ficha de Hipótesis
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso Real -->
+                        <div class="level-card" style="--level-color: #10b981; background: rgba(15, 23, 42, 0.8); margin-bottom: 28px;">
+                            <strong style="color: #10b981; font-size: 0.85rem; text-transform: uppercase;"><i class="fa-solid fa-magnifying-glass-chart"></i> Caso de Estudio Nivel 2:</strong>
+                            <h5 style="color: #fff; font-size: 1.15rem; margin: 6px 0 10px 0;">Gamificación en el Aprendizaje de Algoritmos</h5>
+                            <div style="background: rgba(0,0,0,0.4); padding: 14px; border-left: 3px solid #10b981; border-radius: 6px; font-size: 0.9rem; color: #d1fae5; line-height: 1.7;">
+                                <strong>Objetivo General:</strong> «Determinar el efecto del uso de una plataforma interactiva gamificada en el rendimiento académico en programación de algoritmos.»<br>
+                                <strong>$H_0$:</strong> «No existen diferencias significativas entre el grupo gamificado y el tradicional ($H_0: \mu_{\text{exp}} = \mu_{\text{ctrl}}$).»<br>
+                                <strong>$H_1$:</strong> «Los estudiantes con gamificación obtienen un rendimiento significativamente superior ($H_1: \mu_{\text{exp}} > \mu_{\text{ctrl}}$).»
+                            </div>
+                        </div>
+
+                        <!-- Quiz Nivel 2 -->
+                        <div class="level-card" style="--level-color: #10b981; background: rgba(17, 24, 39, 0.9); margin-bottom: 24px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-clipboard-check" style="color: #10b981;"></i> Autoevaluación Nivel 2</h4>
+                            <div class="quiz-item" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px;">
+                                <p style="color: #fff; font-size: 0.95rem; margin-bottom: 12px;"><strong>1.</strong> ¿Cuál es la función principal de la Hipótesis Nula ($H_0$) en una investigación cuantitativa?</p>
+                                <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px;">
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_basico_0" value="0">
+                                        <span>Es la hipótesis favorita del investigador que busca confirmarse.</span>
+                                    </label>
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_basico_0" value="1">
+                                        <span>Es la proposición que niega o refuta la existencia de un efecto o relación entre variables, sometiéndose a prueba estadística.</span>
+                                    </label>
+                                </div>
+                                <button class="btn btn-secondary check-quiz-btn" data-level="basico" data-qidx="0" data-correct="1" data-explanation="En inferencia estadística, las pruebas contrastan la hipótesis nula para determinar si la evidencia empírica permite rechazarla a favor de H1." style="padding: 6px 14px; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-check"></i> Verificar Respuesta
+                                </button>
+                                <div id="feedback_basico_0" style="display: none; margin-top: 10px; padding: 10px 14px; border-radius: 6px; font-size: 0.88rem;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Navegación -->
+                        <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                            <button class="btn btn-secondary open-level-btn" data-target-level="principiante" style="border-radius: var(--radius-full);">
+                                <i class="fa-solid fa-arrow-left"></i> Nivel Anterior: Principiante
+                            </button>
+                            <button class="btn btn-primary open-level-btn" data-target-level="intermedio" style="border-radius: var(--radius-full);">
+                                Pasar al Nivel 3: Intermedio <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ================= PANEL 3: INTERMEDIO ================= -->
+                    <div id="panel-intermedio" class="level-panel" style="display: none;">
+                        <div class="level-card" style="--level-color: #f59e0b; border-color: #f59e0b; background: rgba(15, 23, 42, 0.85); margin-bottom: 28px;">
+                            <div class="level-card-header">
+                                <div>
+                                    <span class="level-badge" style="color: #f59e0b; background: rgba(245, 158, 11, 0.15);">Nivel 3 • Intermedio</span>
+                                    <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-top: 6px;">
+                                        Diseño Metodológico, Muestreo y Operacionalización
+                                    </h3>
+                                </div>
+                                <div class="level-icon-wrap" style="color: #f59e0b; font-size: 1.6rem;"><i class="fa-solid fa-layer-group"></i></div>
+                            </div>
+                            <p style="color: var(--text-main); font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+                                Domina la elección entre la ruta cuantitativa, cualitativa y mixta. Diseña experimentos con control de varianza (Principio MAXMINCON de Kerlinger), calcula tamaños muestrales con fórmulas matemáticas de precisión estadística y construye matrices de operacionalización de variables.
+                            </p>
+                            <div class="level-meta">
+                                <span><i class="fa-regular fa-clock" style="color: #f59e0b;"></i> <strong>Carga estimada:</strong> 22 Horas</span>
+                                <span><i class="fa-solid fa-list-check" style="color: #f59e0b;"></i> <strong>Contenido:</strong> 3 Módulos Teórico-Prácticos</span>
+                            </div>
+                        </div>
+
+                        <!-- Citas Epistemológicas -->
+                        <div style="margin-bottom: 28px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-book-bookmark" style="color: #f59e0b;"></i> Fundamentación en Libros Canónicos</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #f59e0b; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">Fred N. Kerlinger & Howard B. Lee (2002)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">Investigación del Comportamiento</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«El diseño de investigación expresa tanto la estructura del problema como el plan para obtener evidencia empírica bajo el principio MAXMINCON.»</blockquote>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #f59e0b; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">John W. Creswell (2018)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">Research Design</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«Sampling procedures must specify probabilistic selection, justifying sample size through statistical power analysis.»</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulos Detallados -->
+                        <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 18px;"><i class="fa-solid fa-layer-group" style="color: #f59e0b;"></i> Módulos Formativos</h4>
+                        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+                            <div class="level-card" style="--level-color: #f59e0b; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">3.1 Enfoques, Alcances y Tipologías de Diseño</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Comprende la matriz de diseños experimentales vs no experimentales y sus alcances temporales.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #f59e0b; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #fbbf24; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    Principio MAXMINCON de Kerlinger: MAXimizar la varianza sistemática primaria, MINimizar la varianza de error de medición y CONtrolar variables extrañas/confusoras. Diseños transversales vs longitudinales y experimentales puros.
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Elabora un diagrama metodológico justificando por qué tu investigación requiere un diseño experimental o no experimental.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #f59e0b; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">3.2 Cálculo del Tamaño Muestral y Muestreo Probabilístico</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Aprende las fórmulas matemáticas estadísticas para calcular la muestra representativa.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #f59e0b; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #fbbf24; display: block; font-size: 0.82rem; text-transform: uppercase;">Fórmula Población Finita:</strong>
+                                    $$n = \frac{N \cdot Z^2 \cdot p \cdot q}{e^2 \cdot (N - 1) + Z^2 \cdot p \cdot q}$$<br>
+                                    Donde $Z = 1.96$ (95% de confianza), $p = 0.5, q = 0.5$, y $e = 0.05$ (error muestral del 5%).
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Calcula el tamaño de muestra de una población universitaria con $N = 2,400$ estudiantes, 95% de confianza y 5% de error.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #f59e0b; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">3.3 Matriz de Operacionalización de Variables y Escalas</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Desglosa variables conceptuales en dimensiones, indicadores cuantificables y escalas.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #f59e0b; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #fbbf24; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    Estructura: Variable | Definición Conceptual | Definición Operacional | Dimensiones | Indicadores | Escala de Medición (Nominal, Ordinal, Intervalo, Razón).
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Diseña una matriz de operacionalización completa para 'Calidad del Software Educativo' con 2 dimensiones y 4 indicadores.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Materiales, Recursos & Plantillas del Nivel 3 -->
+                        <div style="margin-bottom: 30px;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                                <h4 style="color: #fff; font-size: 1.25rem;">
+                                    <i class="fa-solid fa-folder-open" style="color: #f59e0b;"></i> Materiales & Recursos del Curso (Nivel 3)
+                                </h4>
+                                <span class="badge" style="background: rgba(245, 158, 11, 0.15); color: #fbbf24; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600;">
+                                    3 Recursos Disponibles
+                                </span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #f59e0b; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #fbbf24; font-weight: 700; background: rgba(245, 158, 11, 0.15); padding: 3px 8px; border-radius: 4px;">Ficha Matemática</span>
+                                            <i class="fa-solid fa-calculator" style="color: #f59e0b; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Calculadora & Formulario de Tamaño Muestral</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Fórmulas de muestreo probabilístico para poblaciones finitas e infinitas con valores Z (90%, 95%, 99%).</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# FÓRMULA DE TAMAÑO MUESTRAL (POBLACIONES FINITAS)&#10;n = (N * Z^2 * p * q) / (e^2 * (N - 1) + Z^2 * p * q)&#10;&#10;Donde:&#10;- N = Tamaño de la población&#10;- Z = 1.96 (Nivel de confianza del 95%)&#10;- p = 0.5 (Proporción esperada favorable)&#10;- q = 0.5 (1 - p)&#10;- e = 0.05 (Margen de error máximo del 5%)" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Fórmulas Muestrales
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #f59e0b; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #fbbf24; font-weight: 700; background: rgba(245, 158, 11, 0.15); padding: 3px 8px; border-radius: 4px;">Plantilla Estructurada</span>
+                                            <i class="fa-solid fa-table-cells" style="color: #f59e0b; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Plantilla de Matriz de Operacionalización</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Cuadro estandarizado para definir variables, dimensiones, indicadores, niveles y escalas de medición.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="| Variable | Definición Conceptual | Definición Operacional | Dimensiones | Indicadores | Escala de Medición | Ítems |&#10;| :--- | :--- | :--- | :--- | :--- | :--- | :--- |&#10;| Variable Indep. (X) | | | Dimensión 1 | Indicador 1.1 | Ordinal (Likert 1-5) | 1, 2, 3 |&#10;| | | | Dimensión 2 | Indicador 2.1 | Razón (Segundos) | 4, 5 |&#10;| Variable Dep. (Y) | | | Dimensión 1 | Indicador 1.1 | Intervalo (Puntaje) | 6, 7, 8 |" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Matriz de Operacionalización
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #f59e0b; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #fbbf24; font-weight: 700; background: rgba(245, 158, 11, 0.15); padding: 3px 8px; border-radius: 4px;">Guía Experimental</span>
+                                            <i class="fa-solid fa-flask-vial" style="color: #f59e0b; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Guía del Principio MAXMINCON (Kerlinger)</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Estrategias para maximizar varianza sistemática, minimizar varianza de error y controlar variables extrañas.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# PRINCIPIO MAXMINCON (FRED N. KERLINGER)&#10;1. MAX (Maximizar varianza sistemática): Hacer los tratamientos experimentales lo más disímiles y nítidos posible.&#10;2. MIN (Minimizar varianza de error): Usar instrumentos altamente confiables (alfa > 0.80) e instrucciones estandarizadas.&#10;3. CON (Controlar variables extrañas): Aleatorización, grupos de control equivalentes y emparejamiento." style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Guía MAXMINCON
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso Real Nivel 3 -->
+                        <div class="level-card" style="--level-color: #f59e0b; background: rgba(15, 23, 42, 0.8); margin-bottom: 28px;">
+                            <strong style="color: #f59e0b; font-size: 0.85rem; text-transform: uppercase;"><i class="fa-solid fa-magnifying-glass-chart"></i> Caso de Estudio Nivel 3:</strong>
+                            <h5 style="color: #fff; font-size: 1.15rem; margin: 6px 0 10px 0;">Operacionalización de 'Usabilidad de Software Educativo'</h5>
+                            <div style="background: rgba(0,0,0,0.4); padding: 14px; border-left: 3px solid #f59e0b; border-radius: 6px; font-size: 0.9rem; color: #fef3c7; line-height: 1.7;">
+                                <strong>Variable:</strong> Usabilidad del Software Educativo (Norma ISO/IEC 25010).<br>
+                                <strong>Dimensión 1 (Eficiencia):</strong> Indicador: Tiempo promedio en segundos para resolver un reto algorítmico (Escala: Razón).<br>
+                                <strong>Dimensión 2 (Eficacia):</strong> Indicador: Tasa porcentual de ejercicios resueltos sin errores de compilación (Escala: Razón).<br>
+                                <strong>Dimensión 3 (Satisfacción):</strong> Indicador: Puntuación en la escala estandarizada SUS de 1 a 100 puntos (Escala: Intervalo).
+                            </div>
+                        </div>
+
+                        <!-- Quiz Nivel 3 -->
+                        <div class="level-card" style="--level-color: #10b981; background: rgba(17, 24, 39, 0.9); margin-bottom: 24px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-clipboard-check" style="color: #10b981;"></i> Autoevaluación Nivel 3</h4>
+                            <div class="quiz-item" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px;">
+                                <p style="color: #fff; font-size: 0.95rem; margin-bottom: 12px;"><strong>1.</strong> ¿Qué establece el principio MAXMINCON postulado por Fred N. Kerlinger?</p>
+                                <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px;">
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_intermedio_0" value="0">
+                                        <span>Maximizar el número de participantes, minimizar los costos y controlar la duración.</span>
+                                    </label>
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_intermedio_0" value="1">
+                                        <span>Maximizar la varianza sistemática primaria, minimizar la varianza de error de medición y controlar la varianza de variables extrañas.</span>
+                                    </label>
+                                </div>
+                                <button class="btn btn-secondary check-quiz-btn" data-level="intermedio" data-qidx="0" data-correct="1" data-explanation="El principio MAXMINCON es el pilar del diseño experimental riguroso postulado por Kerlinger." style="padding: 6px 14px; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-check"></i> Verificar Respuesta
+                                </button>
+                                <div id="feedback_intermedio_0" style="display: none; margin-top: 10px; padding: 10px 14px; border-radius: 6px; font-size: 0.88rem;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Navegación -->
+                        <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                            <button class="btn btn-secondary open-level-btn" data-target-level="basico" style="border-radius: var(--radius-full);">
+                                <i class="fa-solid fa-arrow-left"></i> Nivel Anterior: Básico
+                            </button>
+                            <button class="btn btn-primary open-level-btn" data-target-level="avanzado" style="border-radius: var(--radius-full);">
+                                Pasar al Nivel 4: Avanzado <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ================= PANEL 4: AVANZADO ================= -->
+                    <div id="panel-avanzado" class="level-panel" style="display: none;">
+                        <div class="level-card" style="--level-color: #8b5cf6; border-color: #8b5cf6; background: rgba(15, 23, 42, 0.85); margin-bottom: 28px;">
+                            <div class="level-card-header">
+                                <div>
+                                    <span class="level-badge" style="color: #8b5cf6; background: rgba(139, 92, 246, 0.15);">Nivel 4 • Avanzado</span>
+                                    <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-top: 6px;">
+                                        Instrumentación, Psicometría y Estadística Inferencial
+                                    </h3>
+                                </div>
+                                <div class="level-icon-wrap" style="color: #8b5cf6; font-size: 1.6rem;"><i class="fa-solid fa-chart-pie"></i></div>
+                            </div>
+                            <p style="color: var(--text-main); font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+                                Construye instrumentos psicométricamente válidos, mide su consistencia interna con la fórmula del Alfa de Cronbach ($\alpha$), calcula la validez de contenido por juicio de expertos (V de Aiken), ejecuta pruebas de normalidad (Shapiro-Wilk / Kolmogorov-Smirnov) y contrasta hipótesis con pruebas paramétricas y no paramétricas.
+                            </p>
+                            <div class="level-meta">
+                                <span><i class="fa-regular fa-clock" style="color: #8b5cf6;"></i> <strong>Carga estimada:</strong> 28 Horas</span>
+                                <span><i class="fa-solid fa-list-check" style="color: #8b5cf6;"></i> <strong>Contenido:</strong> 3 Módulos Teórico-Prácticos</span>
+                            </div>
+                        </div>
+
+                        <!-- Citas Epistemológicas -->
+                        <div style="margin-bottom: 28px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-book-bookmark" style="color: #8b5cf6;"></i> Fundamentación en Libros Canónicos</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #8b5cf6; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">Fred N. Kerlinger & Howard B. Lee (2002)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">Investigación del Comportamiento</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«La validez responde a: ¿Estamos midiendo realmente lo que creemos que estamos midiendo? La confiabilidad: ¿obtendremos los mismos resultados al repetir?»</blockquote>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #8b5cf6; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">John W. Creswell (2018)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">Research Design</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«Researchers must always report Effect Size (Cohen's d) to convey the practical magnitude of the findings beyond the p-value.»</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulos Detallados -->
+                        <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 18px;"><i class="fa-solid fa-layer-group" style="color: #8b5cf6;"></i> Módulos Formativos</h4>
+                        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+                            <div class="level-card" style="--level-color: #8b5cf6; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">4.1 Validación Psicométrica (V de Aiken y Alfa de Cronbach)</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Mide el rigor psicométrico de cuestionarios y escalas de medición con fórmulas matemáticas.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #8b5cf6; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #c4b5fd; display: block; font-size: 0.82rem; text-transform: uppercase;">Fórmula Alfa de Cronbach:</strong>
+                                    $$\alpha = \frac{K}{K - 1} \left( 1 - \frac{\sum s_i^2}{s_t^2} \right)$$<br>
+                                    Donde $K$ es el número de ítems, $s_i^2$ la varianza de cada ítem y $s_t^2$ la varianza total. Se exige $\alpha \ge 0.80$.
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Aplica una escala piloto de 5 ítems a 10 personas y calcula el coeficiente Alfa de Cronbach.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #8b5cf6; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">4.2 Pruebas de Normalidad y Selección Paramétrica</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">El árbol de decisión para elegir con precisión entre estadística paramétrica y no paramétrica.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #8b5cf6; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #c4b5fd; display: block; font-size: 0.82rem; text-transform: uppercase;">Regla de Decisión:</strong>
+                                    Prueba de Shapiro-Wilk ($n < 50$) o Kolmogorov-Smirnov ($n \ge 50$). Si $p > 0.05 \rightarrow$ Normal (t-Student, ANOVA). Si $p \le 0.05 \rightarrow$ No Normal (Mann-Whitney, Wilcoxon, Kruskal-Wallis).
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Dado un grupo de 30 estudiantes con $p = 0.35$ en Shapiro-Wilk, justifica qué prueba estadística debes aplicar.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #8b5cf6; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">4.3 Significación Estadística ($p < 0.05$) y Tamaño del Efecto ($d$ de Cohen)</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Interpreta el valor p y calcula la magnitud práctica del hallazgo con la $d$ de Cohen.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #8b5cf6; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #c4b5fd; display: block; font-size: 0.82rem; text-transform: uppercase;">Fórmula $d$ de Cohen:</strong>
+                                    $$d = \frac{\bar{X}_1 - \bar{X}_2}{s_{\text{agrupada}}}$$<br>
+                                    Interpretación: $d = 0.20$ (pequeño), $d = 0.50$ (mediano), $d \ge 0.80$ (efecto grande).
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Calcula el tamaño del efecto dados dos grupos con medias 17.5 y 13.2 e interpreta su magnitud pedagógica.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Materiales, Recursos & Plantillas del Nivel 4 -->
+                        <div style="margin-bottom: 30px;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                                <h4 style="color: #fff; font-size: 1.25rem;">
+                                    <i class="fa-solid fa-folder-open" style="color: #8b5cf6;"></i> Materiales & Recursos del Curso (Nivel 4)
+                                </h4>
+                                <span class="badge" style="background: rgba(139, 92, 246, 0.15); color: #c4b5fd; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600;">
+                                    3 Recursos Disponibles
+                                </span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #8b5cf6; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #c4b5fd; font-weight: 700; background: rgba(139, 92, 246, 0.15); padding: 3px 8px; border-radius: 4px;">Diagrama de Flujo</span>
+                                            <i class="fa-solid fa-diagram-project" style="color: #8b5cf6; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Árbol de Decisión Estadística Paramétrica vs No Paramétrica</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Esquema interactivo para seleccionar la prueba adecuada (t-Student, ANOVA, Mann-Whitney, Wilcoxon, Chi-Cuadrado).</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# ÁRBOL DE DECISIÓN ESTADÍSTICA (NORMALIDAD p > 0.05)&#10;1. Comparar 2 grupos independientes:&#10;   - Normal (p > 0.05) -> t de Student para muestras independientes&#10;   - No Normal (p <= 0.05) -> U de Mann-Whitney&#10;&#10;2. Comparar 2 momentos del mismo grupo (Pretest - Postest):&#10;   - Normal -> t de Student relacionada / pareada&#10;   - No Normal -> Prueba de Rangos de Wilcoxon&#10;&#10;3. Comparar 3 o más grupos:&#10;   - Normal -> ANOVA de un factor (Post-hoc Tukey)&#10;   - No Normal -> Kruskal-Wallis" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Árbol de Decisión
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #8b5cf6; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #c4b5fd; font-weight: 700; background: rgba(139, 92, 246, 0.15); padding: 3px 8px; border-radius: 4px;">Plantilla Psicométrica</span>
+                                            <i class="fa-solid fa-chart-simple" style="color: #8b5cf6; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Formulario Psicométrico: V de Aiken y Alfa de Cronbach</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Fichas de validación de contenido por juicio de expertos y fórmulas de consistencia interna con escalas Likert.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# FÓRMULAS PSICOMÉTRICAS&#10;1. Validez de Contenido (V de Aiken):&#10;   V = S / [n * (c - 1)] = Sum(r_i - l) / [n * (c - 1)]&#10;   Criterio: V >= 0.80 para considerar el ítem válido.&#10;&#10;2. Confiabilidad (Alfa de Cronbach):&#10;   α = [K / (K - 1)] * [1 - (Sum(s_i^2) / s_t^2)]&#10;   Criterio: α >= 0.80 (Excelente/Bueno)." style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Ficha Psicométrica
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #8b5cf6; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #c4b5fd; font-weight: 700; background: rgba(139, 92, 246, 0.15); padding: 3px 8px; border-radius: 4px;">Guía Cuantitativa</span>
+                                            <i class="fa-solid fa-chart-pie" style="color: #8b5cf6; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Tabla de Tamaño del Efecto (d de Cohen & Eta Cuadrado)</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Criterios de la APA y ASA para reportar la magnitud sustantiva más allá de la significación estadística.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# INTERPRETACIÓN DEL TAMAÑO DEL EFECTO (d DE COHEN)&#10;d = (Media_1 - Media_2) / Desviación_Agrupada&#10;&#10;Valores de referencia (Cohen, 1988):&#10;- d = 0.20 -> Efecto pequeño&#10;- d = 0.50 -> Efecto mediano&#10;- d >= 0.80 -> Efecto grande / potente&#10;&#10;Nota: La significación (p < 0.05) indica existencia; la d de Cohen indica relevancia práctica." style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Guía de Tamaño del Efecto
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso Real Nivel 4 -->
+                        <div class="level-card" style="--level-color: #8b5cf6; background: rgba(15, 23, 42, 0.8); margin-bottom: 28px;">
+                            <strong style="color: #8b5cf6; font-size: 0.85rem; text-transform: uppercase;"><i class="fa-solid fa-magnifying-glass-chart"></i> Caso de Estudio Nivel 4:</strong>
+                            <h5 style="color: #fff; font-size: 1.15rem; margin: 6px 0 10px 0;">Contraste de Hipótesis y Tamaño del Efecto en Educación STEM</h5>
+                            <div style="background: rgba(0,0,0,0.4); padding: 14px; border-left: 3px solid #8b5cf6; border-radius: 6px; font-size: 0.9rem; color: #ede9fe; line-height: 1.7;">
+                                <strong>1. Normalidad:</strong> Kolmogorov-Smirnov arrojó $p = 0.28 > 0.05$ (Distribución normal confirmada).<br>
+                                <strong>2. Prueba Paramétrica:</strong> t de Student para muestras independientes: $t(58) = 4.15, p = 0.0002$ ($p < 0.001$, altamente significativo).<br>
+                                <strong>3. Tamaño del Efecto:</strong> $d = 1.08$ (Efecto muy grande según criterios de Cohen).<br>
+                                <strong>4. Veredicto:</strong> Se rechaza $H_0$ con un 99.9% de certeza y un impacto sustantivo de gran magnitud en el aprendizaje.
+                            </div>
+                        </div>
+
+                        <!-- Quiz Nivel 4 -->
+                        <div class="level-card" style="--level-color: #10b981; background: rgba(17, 24, 39, 0.9); margin-bottom: 24px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-clipboard-check" style="color: #10b981;"></i> Autoevaluación Nivel 4</h4>
+                            <div class="quiz-item" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px;">
+                                <p style="color: #fff; font-size: 0.95rem; margin-bottom: 12px;"><strong>1.</strong> Si una prueba de normalidad Shapiro-Wilk arroja un valor p = 0.012 en una variable de rendimiento, ¿qué tipo de estadística debes seleccionar?</p>
+                                <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px;">
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_avanzado_0" value="0">
+                                        <span>Estadística Paramétrica (t de Student) porque p es menor a 0.05.</span>
+                                    </label>
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_avanzado_0" value="1">
+                                        <span>Estadística No Paramétrica (Mann-Whitney o Wilcoxon) porque p < 0.05 rechaza el supuesto de normalidad.</span>
+                                    </label>
+                                </div>
+                                <button class="btn btn-secondary check-quiz-btn" data-level="avanzado" data-qidx="0" data-correct="1" data-explanation="En las pruebas de normalidad, un p < 0.05 indica que los datos se desvían significativamente de la distribución normal, obligando al uso de pruebas no paramétricas." style="padding: 6px 14px; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-check"></i> Verificar Respuesta
+                                </button>
+                                <div id="feedback_avanzado_0" style="display: none; margin-top: 10px; padding: 10px 14px; border-radius: 6px; font-size: 0.88rem;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Navegación -->
+                        <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                            <button class="btn btn-secondary open-level-btn" data-target-level="intermedio" style="border-radius: var(--radius-full);">
+                                <i class="fa-solid fa-arrow-left"></i> Nivel Anterior: Intermedio
+                            </button>
+                            <button class="btn btn-primary open-level-btn" data-target-level="experto" style="border-radius: var(--radius-full);">
+                                Pasar al Nivel 5: Experto <i class="fa-solid fa-arrow-right"></i>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- ================= PANEL 5: EXPERTO ================= -->
+                    <div id="panel-experto" class="level-panel" style="display: none;">
+                        <div class="level-card" style="--level-color: #ec4899; border-color: #ec4899; background: rgba(15, 23, 42, 0.85); margin-bottom: 28px;">
+                            <div class="level-card-header">
+                                <div>
+                                    <span class="level-badge" style="color: #ec4899; background: rgba(236, 72, 153, 0.15);">Nivel 5 • Experto</span>
+                                    <h3 style="font-family: var(--font-heading); font-size: 1.6rem; color: #fff; margin-top: 6px;">
+                                        Publicación Científica, Bioética, Indexación y Peer Review
+                                    </h3>
+                                </div>
+                                <div class="level-icon-wrap" style="color: #ec4899; font-size: 1.6rem;"><i class="fa-solid fa-award"></i></div>
+                            </div>
+                            <p style="color: var(--text-main); font-size: 0.98rem; line-height: 1.7; margin-bottom: 14px;">
+                                El nivel cumbre: redacción científica con el formato internacional IMRyD (Introducción, Métodos, Resultados y Discusión), bioética institucional (Helsinki/Belmont), directrices éticas de IA (COPE), selección de revistas indexadas (Scopus/WoS Q1-Q4) y cartas de réplica a revisores (*Rebuttal letters*).
+                            </p>
+                            <div class="level-meta">
+                                <span><i class="fa-regular fa-clock" style="color: #ec4899;"></i> <strong>Carga estimada:</strong> 35 Horas</span>
+                                <span><i class="fa-solid fa-list-check" style="color: #ec4899;"></i> <strong>Contenido:</strong> 3 Módulos Teórico-Prácticos</span>
+                            </div>
+                        </div>
+
+                        <!-- Citas Epistemológicas -->
+                        <div style="margin-bottom: 28px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-book-bookmark" style="color: #ec4899;"></i> Fundamentación en Libros Canónicos</h4>
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 14px;">
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #ec4899; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">Mario Bunge (2014)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">La investigación científica</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«La ciencia no es un monólogo, sino un diálogo crítico constante sometido al escrutinio implacable de los pares.»</blockquote>
+                                </div>
+                                <div style="background: rgba(255,255,255,0.02); border-left: 3px solid #ec4899; padding: 14px; border-radius: 6px;">
+                                    <strong style="color: #fff; display: block; font-size: 0.9rem;">Thomas S. Kuhn (1962)</strong>
+                                    <span style="color: #a5b4fc; font-size: 0.8rem;">La estructura de las revoluciones científicas</span>
+                                    <blockquote style="font-size: 0.85rem; color: var(--text-muted); margin-top: 6px;">«El consenso de la comunidad científica y los canales formalizados definen las reglas del juego metodológico.»</blockquote>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Módulos Detallados -->
+                        <h4 style="color: #fff; font-size: 1.25rem; margin-bottom: 18px;"><i class="fa-solid fa-layer-group" style="color: #ec4899;"></i> Módulos Formativos</h4>
+                        <div style="display: flex; flex-direction: column; gap: 20px; margin-bottom: 30px;">
+                            <div class="level-card" style="--level-color: #ec4899; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">5.1 Estructura Estándar del Artículo Científico (IMRyD)</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Dominio de cada sección de un paper científico de alto impacto para revistas indexadas.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #ec4899; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #f472b6; display: block; font-size: 0.82rem; text-transform: uppercase;">Estructura:</strong>
+                                    Título, Resumen estructurado (250 palabras), Introducción (Embudo y vacíos), Métodos (Diseño, muestra, instrumentos, reproducibilidad), Resultados (Tablas/Figuras sin redundancia) y Discusión (Interpretación y confrontación con la literatura).
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Redacta el Resumen estructurado (Abstract) de tu investigación en exactamente 250 palabras en español e inglés.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #ec4899; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">5.2 Bioética, Integridad, Comités IRB y Uso de IA</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Principios éticos de Helsinki, consentimiento informado, autoría y directrices COPE sobre IA.</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #ec4899; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #f472b6; display: block; font-size: 0.82rem; text-transform: uppercase;">Directrices COPE:</strong>
+                                    Las herramientas de IA Generativa (ChatGPT, Claude) NO pueden figurar como autores; su uso para redacción o asistencia debe declararse explícitamente en la metodología.
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Redacta un protocolo de Consentimiento Informado formal que contemple protección de datos y voluntariedad.</p>
+                                </div>
+                            </div>
+
+                            <div class="level-card" style="--level-color: #ec4899; background: rgba(15, 23, 42, 0.65);">
+                                <h5 style="color: #fff; font-size: 1.15rem; margin-bottom: 8px;">5.3 Métricas de Impacto (Scopus/JCR) y Peer Review</h5>
+                                <p style="color: var(--text-muted); font-size: 0.92rem; margin-bottom: 12px;">Cuartiles Q1-Q4, prevención de revistas depredadoras y redacción de cartas de réplica (*Rebuttal*).</p>
+                                <div style="background: rgba(0,0,0,0.3); border-left: 3px solid #ec4899; padding: 12px 16px; border-radius: 6px; font-size: 0.9rem; color: #e5e7eb; margin-bottom: 12px; line-height: 1.7;">
+                                    <strong style="color: #f472b6; display: block; font-size: 0.82rem; text-transform: uppercase;">Teoría:</strong>
+                                    Clasificación por cuartiles (Q1: top 25% más citado). Ante veredictos de revisión mayor, se elabora una tabla punto por punto: Comentario del Revisor -> Respuesta del Autor -> Modificación con página y línea.
+                                </div>
+                                <div style="background: rgba(16, 185, 129, 0.06); border: 1px solid rgba(16, 185, 129, 0.25); border-radius: 6px; padding: 12px 16px;">
+                                    <strong style="color: #6ee7b7; font-size: 0.88rem;"><i class="fa-solid fa-flask-vial"></i> Taller Práctico:</strong>
+                                    <p style="font-size: 0.88rem; color: #e5e7eb; margin-top: 4px;">Simula una crítica del 'Revisor 2' sobre tu muestra y redacta la respuesta profesional correspondiente.</p>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Materiales, Recursos & Plantillas del Nivel 5 -->
+                        <div style="margin-bottom: 30px;">
+                            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 16px; flex-wrap: wrap; gap: 10px;">
+                                <h4 style="color: #fff; font-size: 1.25rem;">
+                                    <i class="fa-solid fa-folder-open" style="color: #ec4899;"></i> Materiales & Recursos del Curso (Nivel 5)
+                                </h4>
+                                <span class="badge" style="background: rgba(236, 72, 153, 0.15); color: #f472b6; padding: 4px 12px; border-radius: var(--radius-full); font-size: 0.8rem; font-weight: 600;">
+                                    3 Recursos Disponibles
+                                </span>
+                            </div>
+
+                            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 16px;">
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #ec4899; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #f472b6; font-weight: 700; background: rgba(236, 72, 153, 0.15); padding: 3px 8px; border-radius: 4px;">Plantilla de Publicación</span>
+                                            <i class="fa-solid fa-newspaper" style="color: #ec4899; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Estructura IMRyD y Plantilla de Artículo Científico</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Plantilla estándar para estructurar Título, Abstract (250 palabras), IMRyD, Tablas APA 7ma ed. y disponibilidad de datos.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# PLANTILLA MANUSCRITO IMRyD (ESTÁNDAR SCOPUS/WoS)&#10;1. Title (Máx. 15 palabras, conciso y directo)&#10;2. Abstract (250 palabras: Background, Objectives, Methods, Results, Conclusions)&#10;3. Keywords (5 descriptores Thesaurus/MeSH/ERIC)&#10;4. Introduction (Embudo del problema + vacíos de la literatura)&#10;5. Methods (Diseño, población, muestra, instrumentos, procedimiento ético IRB)&#10;6. Results (Tablas APA 7ma ed., figuras, contrastes de hipótesis)&#10;7. Discussion (Interpretación, contrastación teórica, limitaciones y líneas futuras)&#10;8. Data Availability Statement & Declaración COPE sobre IA" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Plantilla IMRyD
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #ec4899; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #f472b6; font-weight: 700; background: rgba(236, 72, 153, 0.15); padding: 3px 8px; border-radius: 4px;">Formato Ético Institucional</span>
+                                            <i class="fa-solid fa-shield-halved" style="color: #ec4899; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Protocolo de Consentimiento Informado & Declaración COPE</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Modelos para comités de bioética IRB, cláusulas de anonimato, no maleficencia y declaración explícita de IA.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# FORMATO DE CONSENTIMIENTO INFORMADO & ÉTICA IRB&#10;- Título del Proyecto:&#10;- Investigador Principal:&#10;- Objetivo del Estudio:&#10;- Declaración de Voluntariedad y Retiro sin perjuicio:&#10;- Confidencialidad y Protección de Datos (Helsinki / Belmont):&#10;- Declaración de Inteligencia Artificial (COPE): 'Los autores declaran haber utilizado [Herramienta] exclusivamente para corrección gramatical y de estilo; los análisis y conclusiones son responsabilidad humana exclusiva.'&#10;- Firma del Participante / Tutor Legal:" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Formato Bioético
+                                    </button>
+                                </div>
+
+                                <div style="background: rgba(17, 24, 39, 0.75); border: 1px solid var(--border-color); border-top: 3px solid #ec4899; border-radius: var(--radius-md); padding: 18px; display: flex; flex-direction: column; justify-content: space-between;">
+                                    <div>
+                                        <div style="display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 8px;">
+                                            <span style="font-size: 0.75rem; text-transform: uppercase; color: #f472b6; font-weight: 700; background: rgba(236, 72, 153, 0.15); padding: 3px 8px; border-radius: 4px;">Plantilla de Peer Review</span>
+                                            <i class="fa-solid fa-envelope-open-text" style="color: #ec4899; font-size: 1.2rem;"></i>
+                                        </div>
+                                        <h5 style="color: #fff; font-size: 1rem; margin-bottom: 6px;">Plantilla de Carta de Réplica a Revisores (Rebuttal Letter)</h5>
+                                        <p style="color: var(--text-muted); font-size: 0.86rem; line-height: 1.5; margin-bottom: 14px;">Tabla formal para responder a dictámenes de revisión mayor/menor en revistas Scopus/JCR Q1-Q4.</p>
+                                    </div>
+                                    <button class="btn btn-secondary copy-btn" data-copy="# CARTA DE RÉPLICA A REVISORES (REBUTTAL LETTER)&#10;Dear Editor and Reviewers,&#10;We sincerely thank the reviewers for their constructive feedback...&#10;&#10;| # | Comentario del Revisor | Respuesta de los Autores | Cambio Realizado en el Manuscrito | Página & Línea |&#10;| :--- | :--- | :--- | :--- | :--- |&#10;| R1.1 | Justificar el tamaño muestral. | Agradecemos la observación. Se incluyó el cálculo con G*Power... | Se añadió párrafo explicativo en Métodos. | Pág. 4, Líneas 112-118 |&#10;| R2.1 | Clarificar el análisis de normalidad. | Se especificó el estadístico de Shapiro-Wilk... | Tabla 2 actualizada con valores p. | Pág. 7, Líneas 204-209 |" style="width: 100%; justify-content: center; font-size: 0.82rem; padding: 7px 12px;">
+                                        <i class="fa-regular fa-copy"></i> Copiar Plantilla de Rebuttal
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Caso Real Nivel 5 -->
+                        <div class="level-card" style="--level-color: #ec4899; background: rgba(15, 23, 42, 0.8); margin-bottom: 28px;">
+                            <strong style="color: #ec4899; font-size: 0.85rem; text-transform: uppercase;"><i class="fa-solid fa-magnifying-glass-chart"></i> Caso de Estudio Nivel 5:</strong>
+                            <h5 style="color: #fff; font-size: 1.15rem; margin: 6px 0 10px 0;">Superando un Dictamen de 'Revisión Mayor' en Revista Scopus Q1</h5>
+                            <div style="background: rgba(0,0,0,0.4); padding: 14px; border-left: 3px solid #ec4899; border-radius: 6px; font-size: 0.9rem; color: #fce7f3; line-height: 1.7;">
+                                <strong>Objeción del Revisor 2:</strong> «El análisis inferencial presenta valores p significativos pero carece del reporte de Tamaño del Efecto y el protocolo ético no detalla el uso de IA.»<br>
+                                <strong>Respuesta Estratégica:</strong> Se redactó una matriz de respuesta punto por punto en tono respetuoso, se incorporó la $d$ de Cohen ($d = 1.08$) en la Tabla 4 y se añadió la Declaración de Integridad Científica conforme a COPE.<br>
+                                <strong>Resultado Final:</strong> Manuscrito <em>Aceptado</em> sin modificaciones adicionales.
+                            </div>
+                        </div>
+
+                        <!-- Quiz Nivel 5 -->
+                        <div class="level-card" style="--level-color: #10b981; background: rgba(17, 24, 39, 0.9); margin-bottom: 24px;">
+                            <h4 style="color: #fff; font-size: 1.15rem; margin-bottom: 14px;"><i class="fa-solid fa-clipboard-check" style="color: #10b981;"></i> Autoevaluación Nivel 5</h4>
+                            <div class="quiz-item" style="background: rgba(255, 255, 255, 0.02); border: 1px solid var(--border-color); border-radius: 8px; padding: 16px;">
+                                <p style="color: #fff; font-size: 0.95rem; margin-bottom: 12px;"><strong>1.</strong> De acuerdo con ICMJE y COPE, ¿puede un modelo de Inteligencia Artificial (ej. ChatGPT) figurar como coautor de un artículo científico?</p>
+                                <div style="display: flex; flex-direction: column; gap: 8px; margin-bottom: 12px;">
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_experto_0" value="0">
+                                        <span>Sí, siempre que haya generado más del 50% del texto.</span>
+                                    </label>
+                                    <label style="display: flex; gap: 10px; font-size: 0.9rem; background: rgba(255,255,255,0.03); padding: 8px 12px; border-radius: 6px; cursor: pointer;">
+                                        <input type="radio" name="quiz_experto_0" value="1">
+                                        <span>No, porque las herramientas de IA no tienen personalidad jurídica ni responsabilidad ética legal sobre los datos.</span>
+                                    </label>
+                                </div>
+                                <button class="btn btn-secondary check-quiz-btn" data-level="experto" data-qidx="0" data-correct="1" data-explanation="Los organismos éticos internacionales establecen que la autoría implica responsabilidad ética y legal intransferible." style="padding: 6px 14px; font-size: 0.85rem;">
+                                    <i class="fa-solid fa-check"></i> Verificar Respuesta
+                                </button>
+                                <div id="feedback_experto_0" style="display: none; margin-top: 10px; padding: 10px 14px; border-radius: 6px; font-size: 0.88rem;"></div>
+                            </div>
+                        </div>
+
+                        <!-- Botones de Navegación -->
+                        <div style="display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap;">
+                            <button class="btn btn-secondary open-level-btn" data-target-level="avanzado" style="border-radius: var(--radius-full);">
+                                <i class="fa-solid fa-arrow-left"></i> Nivel Anterior: Avanzado
+                            </button>
+                            <span style="color: #10b981; font-weight: 600; font-size: 0.9rem; display: flex; align-items: center; gap: 6px;">
+                                <i class="fa-solid fa-trophy"></i> ¡Nivel Máximo de Especialización!
+                            </span>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
@@ -429,82 +1381,8 @@
             </div>
         </section>
 
-        <!-- Sección 5: Pipeline & Arquitectura Archify -->
-        <section id="arquitectura" class="section" style="background: rgba(15, 23, 42, 0.6); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-tag">Ingeniería & Pipeline</span>
-                    <h2 class="section-title">Arquitectura del Proyecto (Estilo Archify)</h2>
-                    <p class="section-desc">
-                        Flujo de procesamiento técnico desacoplado siguiendo las directrices de <a href="https://github.com/tt-a1i/archify.git" target="_blank" style="color: var(--secondary); text-decoration: underline;">Archify Engine</a>.
-                    </p>
-                </div>
-
-                <div class="vector-frame" style="margin-bottom: 32px;">
-                    <img src="app/static/images/pipeline_archify_art.png" alt="Pipeline Archify" class="vector-img">
-                </div>
-
-                <div class="pipeline-container">
-                    <div class="pipeline-header">
-                        <div>
-                            <h3 style="font-family: var(--font-heading); font-size: 1.3rem; margin-bottom: 4px;">Pipeline de Ejecución Flask + Capa Científica</h3>
-                            <p style="font-size: 0.88rem; color: var(--text-muted);">Desacoplamiento total entre la infraestructura de Python y el dominio científico.</p>
-                        </div>
-                        <span class="archify-badge"><i class="fa-solid fa-diagram-project"></i> Pipeline Activo</span>
-                    </div>
-
-                    <div class="pipeline-flow">
-                        <div class="stage-card">
-                            <div class="stage-number">1</div>
-                            <div class="stage-info">
-                                <h4>HTTP Request / Dispatcher</h4>
-                                <span class="stage-component">run.py -> app/__init__.py</span>
-                            </div>
-                            <div class="stage-io">
-                                <p style="margin-bottom: 6px;">El servidor WSGI recibe la petición HTTP del cliente y la delega a la factoría de la aplicación Flask.</p>
-                                <div>
-                                    <span class="io-tag">In: Request GET/POST</span>
-                                    <span class="io-tag" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">Out: Blueprint Context</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="stage-card">
-                            <div class="stage-number">2</div>
-                            <div class="stage-info">
-                                <h4>Controller & Business Logic</h4>
-                                <span class="stage-component">app/routes.py</span>
-                            </div>
-                            <div class="stage-io">
-                                <p style="margin-bottom: 6px;">El controlador invoca los proveedores de datos pedagógicos y procesa la lógica de filtrado de niveles.</p>
-                                <div>
-                                    <span class="io-tag">In: level_id / params</span>
-                                    <span class="io-tag" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">Out: Context Dict</span>
-                                </div>
-                            </div>
-                        </div>
-
-                        <div class="stage-card">
-                            <div class="stage-number">3</div>
-                            <div class="stage-info">
-                                <h4>Data Repository Layer</h4>
-                                <span class="stage-component">app/data/levels_data.py & books_data.py</span>
-                            </div>
-                            <div class="stage-io">
-                                <p style="margin-bottom: 6px;">Suministra el currículo científico y catálogo de libros canónicos sin acoplarse al framework web.</p>
-                                <div>
-                                    <span class="io-tag">In: Query</span>
-                                    <span class="io-tag" style="background: rgba(16, 185, 129, 0.15); color: #6ee7b7;">Out: Curriculum Data</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Sección 6: Guía de Ejecución Rápida -->
-        <section id="ejecutar" class="section">
+        <!-- Sección 5: Guía de Ejecución Rápida -->
+        <section id="ejecutar" class="section" style="background: rgba(15, 23, 42, 0.6); border-top: 1px solid var(--border-color); border-bottom: 1px solid var(--border-color);">
             <div class="container">
                 <div class="section-header">
                     <span class="section-tag">Guía de Inicio Rápido</span>
@@ -573,16 +1451,15 @@
                         <li><a href="#niveles">Currículo de 5 Niveles</a></li>
                         <li><a href="#biblioteca">Biblioteca de Autores</a></li>
                         <li><a href="#matriz">Simulador de Matriz</a></li>
-                        <li><a href="#arquitectura">Pipeline Archify</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Arquitectura & Tech</h4>
+                    <h4>Formación & Autores</h4>
                     <ul>
-                        <li><span style="color: #a5b4fc;"><i class="fa-brands fa-python"></i> Python 3.10+</span></li>
-                        <li><span style="color: #38bdf8;"><i class="fa-solid fa-flask"></i> Flask 3.0</span></li>
-                        <li><a href="https://github.com/tt-a1i/archify.git" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Archify Engine</a></li>
+                        <li><span style="color: #a5b4fc;"><i class="fa-solid fa-graduation-cap"></i> 5 Niveles Científicos</span></li>
+                        <li><span style="color: #38bdf8;"><i class="fa-solid fa-book"></i> Bunge, Popper & Sampieri</span></li>
+                        <li><span style="color: #10b981;"><i class="fa-solid fa-chart-pie"></i> Kerlinger & Creswell</span></li>
                     </ul>
                 </div>
             </div>

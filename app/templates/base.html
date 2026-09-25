@@ -33,14 +33,9 @@
             <nav>
                 <ul class="nav-links">
                     <li><a href="{{ url_for('main.index') }}" class="nav-link"><i class="fa-solid fa-house"></i> Inicio</a></li>
-                    <li><a href="{{ url_for('main.levels') }}" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> 5 Niveles</a></li>
+                    <li><a href="{{ url_for('main.levels') }}" class="nav-link"><i class="fa-solid fa-graduation-cap"></i> 5 Niveles del Curso</a></li>
                     <li><a href="{{ url_for('main.biblioteca_view') }}" class="nav-link"><i class="fa-solid fa-book-bookmark"></i> Libros & Autores</a></li>
                     <li><a href="{{ url_for('main.matriz_view') }}" class="nav-link"><i class="fa-solid fa-table-cells"></i> Matriz Científica</a></li>
-                    <li>
-                        <a href="{{ url_for('main.pipeline_view') }}" class="nav-link pipeline-tab">
-                            <i class="fa-solid fa-diagram-project"></i> Pipeline Archify
-                        </a>
-                    </li>
                 </ul>
 
             </nav>
@@ -73,17 +68,17 @@
                     <ul>
                         <li><a href="{{ url_for('main.index') }}">Inicio / Landing Page</a></li>
                         <li><a href="{{ url_for('main.levels') }}">Currículo de los 5 Niveles</a></li>
+                        <li><a href="{{ url_for('main.biblioteca_view') }}">Biblioteca de Autores</a></li>
                         <li><a href="{{ url_for('main.matriz_view') }}">Simulador de Matriz</a></li>
-                        <li><a href="{{ url_for('main.pipeline_view') }}">Pipeline & Arquitectura</a></li>
                     </ul>
                 </div>
 
                 <div class="footer-links">
-                    <h4>Arquitectura & Tech</h4>
+                    <h4>Formación & Autores</h4>
                     <ul>
-                        <li><span style="color: #a5b4fc;"><i class="fa-brands fa-python"></i> Python 3.10+</span></li>
-                        <li><span style="color: #38bdf8;"><i class="fa-solid fa-flask"></i> Flask 3.0</span></li>
-                        <li><a href="https://github.com/tt-a1i/archify.git" target="_blank" rel="noopener noreferrer"><i class="fa-brands fa-github"></i> Archify Engine</a></li>
+                        <li><span style="color: #a5b4fc;"><i class="fa-solid fa-graduation-cap"></i> 5 Niveles Científicos</span></li>
+                        <li><span style="color: #38bdf8;"><i class="fa-solid fa-book"></i> Bunge, Popper & Sampieri</span></li>
+                        <li><span style="color: #10b981;"><i class="fa-solid fa-chart-pie"></i> Kerlinger & Creswell</span></li>
                     </ul>
                 </div>
             </div>

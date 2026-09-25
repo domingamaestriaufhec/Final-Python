@@ -785,11 +785,66 @@ a {
   }
 }
 
-@media (max-width: 600px) {
-  .nav-links {
-    display: none; /* Mobile menu fallback */
-  }
-  .hero-actions {
-    flex-direction: column;
-  }
+/* ==========================================================================
+   Level Cards & Dynamic Theme Utilities
+   ========================================================================== */
+.level-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-md);
+  padding: 24px;
+  transition: transform var(--transition-normal), border-color var(--transition-normal);
+  position: relative;
+  overflow: hidden;
 }
+
+.level-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(255, 255, 255, 0.15);
+}
+
+.level-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 16px;
+}
+
+.level-badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.level-icon-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.level-meta {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  color: var(--text-muted);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  padding-top: 14px;
+  margin-top: 14px;
+}
+
+.theme-principiante { --theme-color: #3b82f6; --theme-bg: rgba(59, 130, 246, 0.15); }
+.theme-basico { --theme-color: #10b981; --theme-bg: rgba(16, 185, 129, 0.15); }
+.theme-intermedio { --theme-color: #f59e0b; --theme-bg: rgba(245, 158, 11, 0.15); }
+.theme-avanzado { --theme-color: #8b5cf6; --theme-bg: rgba(139, 92, 246, 0.15); }
+.theme-experto { --theme-color: #ec4899; --theme-bg: rgba(236, 72, 153, 0.15); }
+
+.lvl-color { color: var(--theme-color); }
+.lvl-border { border-color: var(--theme-color); }
+.lvl-border-top { border-top: 3px solid var(--theme-color); }
+.lvl-border-left { border-left: 3px solid var(--theme-color); }
+.lvl-badge-bg { background: var(--theme-bg); color: var(--theme-color); }
+
